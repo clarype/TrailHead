@@ -1,0 +1,161 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../style.css">
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-9 col-md-7 main">
+
+            <h1 class="page-header">Hike to Jorn Lake</h1>
+
+            <section data-place="overview">
+                            <p>
+                                <a href="../images/JornLake/IMG_0269.JPG" target="_blank"><img>
+                                    <img src="../images/JornLake/IMG_0269.JPG"height="300" width="450"/>
+                                </a>
+                            </p>
+
+                <p> The hike to Jorn lake was the first venture we took deep into the Jefferson Wilderness.It was a
+                    three day trip around the what I call the Marion Lake sub-basin. The over all around trip length
+                    was about 14.5 miles, and the hike to Jorn lake was about 6.5 miles.We started at the Marion Lake
+                    trailhead (trail 3436) which provides access to the Jefferson Wilderness, and all its subsequent
+                    trails. The route of trails we used are as follows (3436,3495,3422,3492,3437,3436).</p>
+
+            </section>
+
+            <section data-place="start">
+                <h2>The Start</h2>
+
+
+                <a href="../images/JornLake/start.jpg" target="_blank">
+                <img src="../images/JornLake/start.jpg" style="float:right;height:450px;width:275px">
+                </a>
+
+
+
+                <p>This trail head has a five dollar a day parking fee and wilderness regulations and wilderness self
+                    issue permit. The start of the hike is thought a cool section of old grow with Douglas- Fir, Western Hemlock,
+                    Western Red Cedar and Pacific fir forest which seems to continue on up to Marion Lake. The first
+                    mile is rises gently to the first switch back which levels back out at Lake Ann. There is
+                     a rocky section of the trail where Lake Ann drains out of which may give old hikers a little trouble. Since
+                     this trail is the closet access to Marion Lake you can expect to see more hikers and even some hiker that
+                pack boats.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+
+            </section>
+
+            <section data-place="marion">
+                <h2> First Look at Marion Lake</h2>
+
+                <a href="../images/JornLake/IMG_0239.JPG" target="_blank">
+                <img src="../images/JornLake/IMG_0239.JPG" height="330.8" width="483.6"/>
+                </a>
+
+                <p>2.3 miles into the hike gives a first look at Marion lake.</p>
+            </section>
+
+            <section  data-place="lookat3Fing">
+                <h2>A look a Three Fingered Jack </h2>
+
+                <a href="../images/JornLake/IMG_0242.JPG" target="_blank">
+                <img src="../images/JornLake/IMG_0242.JPG" height="267.4" width="598.3">
+                </a>
+
+                <p>This point is about 5 miles in on the way to Jorn Lake.</p>
+            </section>
+
+            <section data-place="jornlake">
+                <h2>Jorn Lake</h2>
+
+                <a href="../images/JornLake/IMG_0268.JPG" target="_blank">
+                <img src="../images/JornLake/IMG_0268.JPG" height="302.4" width="302.4"/>
+                </a>
+
+                <p>Looking at Mt.Jefferson</p>
+            </section>
+
+            <section data-place="EightLakes">
+                <h2>Another Look Back at Jack</h2>
+
+                <a href="../images/JornLake/IMG_0272.JPG" target="_blank">
+                <img src="../images/JornLake/IMG_0272.JPG" height="302.4" width="302.4"/>
+                </a>
+
+                <p>...</p>
+            </section>
+
+            <section  data-place="OtherSide">
+                <h2>A last look at Marion</h2>
+
+                <a href="../images/JornLake/IMG_0291.JPG" target="_blank">
+                <img src="../images/JornLake/IMG_0291.JPG" height="302.4" width="302.4"/>
+                </a>
+
+                <p>...</p>
+            </section>
+
+
+
+        </div>
+
+        <div id="map" class="col-sm-3 col-md-5 sidebar">
+
+        </div>
+
+    </div>
+</div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="HikeToJornLake.js"></script>
+<script type="text/javascript">
+    (function () {
+        'use strict';
+
+
+
+        var markers = {
+            bebe: {lat: 44.5147, lon: -121.8692, zoom: 12},
+            trailhead: {lat:44.577200, lon: -121.894900, zoom: 14},
+            jornlake: {lat: 44.5147, lon: -121.8692, zoom: 14},
+            marion: {lat: 44.561183, lon: -121.874333, zoom: 14},
+            lookat3Fing: {lat: 44.528000, lon: -121.870100, zoom: 14},
+            summitlake: {lat: 44.462300, lon: -121.841998, zoom: 14},
+            EightLakes: {lat: 44.5196, lon: -121.8513, zoom: 14},
+            OtherSide: {lat: 44.5640, lon: -121.8639, zoom: 14},
+            start: {lat:44.5764, lon:-121.8930, zoom: 14}
+
+
+        };
+
+        $('.main').storymap({markers: markers});
+
+
+    }());
+
+
+
+</script>
+
+
+</body>
+</html>
