@@ -24,12 +24,7 @@
                         .setContent("You clicked the map at " + e.latlng.toString())
                         .openOn(map);
                 }
-
                 map.on('click', onMapClick);
-
-
-
-
 
                 return map;
             }
@@ -38,12 +33,14 @@
         var settings = $.extend(defaults, options);
 
 
+/*
         if (typeof(L) === 'undefined') {
             throw new Error('Storymap requires Laeaflet');
         }
         if (typeof(_) === 'undefined') {
             throw new Error('Storymap requires underscore.js');
         }
+*/
 
         function getDistanceToTop(elem, top) {
             var docViewTop = $(window).scrollTop();
@@ -92,7 +89,7 @@
             });
         }
 
-        var makeStoryMap = function (element, markers) {     // Here is a part of the test (polylines) //
+        var makeStoryMap = function (element, markers) {
 
             var topElem = $('<div class="breakpoint-current"></div>')
                 .css('top', settings.breakpointPos);
@@ -122,7 +119,11 @@
 
             var fg = L.featureGroup().addTo(map);
 
+
+
             function showMapView(key) {
+
+
 
                 fg.clearLayers();
                 if (key === 'overview') {
@@ -138,9 +139,10 @@
 
                     map.setView([marker.lat, marker.lon], marker.zoom, 1);
                 }
-
-
-
+/*
+                var leaf = L.marker ({
+                    iconUrl: 'leaf-green.png'
+*/
             }
 
             paragraphs.on('viewing', function () {
