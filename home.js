@@ -120,16 +120,12 @@
             var fg = L.featureGroup().addTo(map);
 
 
-            var myIcon = L.icon ({
-                iconUrl: 'TrailHead/images/hiker.jpg',
-                iconSize:     [38, 95], // size of the icon
+           var myIcon = L.icon ({
+                iconUrl: 'TrailHead/images/hiker (3).png',
+                iconSize:     [64, 64], // size of the icon
                 iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
                 popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
             });
-
-
-
-
 
 
             function showMapView(key) {
@@ -147,7 +143,7 @@
                     }
 
 
-                    fg.addLayer(L.marker([marker.lat, marker.lon], {icon: myIcon}));
+                    fg.addLayer(L.marker([marker.lat, marker.lon], {icon: myIcon}  ));
 
                     map.setView([marker.lat, marker.lon], marker.zoom, 1);
 
