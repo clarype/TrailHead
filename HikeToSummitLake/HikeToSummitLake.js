@@ -119,6 +119,13 @@
 
             var fg = L.featureGroup().addTo(map);
 
+          /*  var myIcon = L.icon ({
+                iconUrl:'hiker(3).png',
+                iconSize:     [32, 32], // size of the icon
+                iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
+                popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+            }); */
+
             var HikeToSummitLake = L.polyline([
                     [	44.42548784	,	-121.849102	    ]	,
                     [	44.42548474	,	-121.8491003	]	,
@@ -736,7 +743,7 @@
                         fg.addLayer(layer);
                     }
 
-                    fg.addLayer(L.marker([marker.lat, marker.lon]));
+                    fg.addLayer(L.marker([marker.lat, marker.lon])); // {icon: myIcon}
 
                     map.setView([marker.lat, marker.lon], marker.zoom, 1);
                 }
