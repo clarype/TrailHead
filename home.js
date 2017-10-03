@@ -26,6 +26,8 @@
                 }
                 map.on('click', onMapClick);
 
+                L.control.scale().addTo(map);
+
                 return map;
             }
         };
