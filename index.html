@@ -1,204 +1,212 @@
-﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>BackPacking the NorthWest</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-          integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-          crossorigin=""/>
-    <link rel="icon" type="image/x-icon" href="images/hiker.png">
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="../images/hiker.png">
 
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid">
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Backpacking the Northwest</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="first-slide" src="../images/EagleCap/File_000.jpeg" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption d-none d-md-block text-left">
+                    <h1>Trail</h1>
+                    <p>Something about something</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Link to a Trail</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="second-slide" src="../images/SummitLake/1.jpg" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Trail</h1>
+                    <p>Something about something</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="third-slide" src="../images/JornLake/IMG_0242.JPG" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption d-none d-md-block text-right">
+                    <h1>Trail</h1>
+                    <p>Something about something</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
     <div class="row">
 
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="../images/JornLake/IMG_0269.JPG" alt="Generic placeholder image" width="140" height="140">
+            <h2>Hike to Jorn Lake</h2>
+            <p>
+                The hike to Jorn Lake is approximately 7 miles into the Jefferson Wilderness in the Cascade Range of
+                Oregon. It's not a difficult trail when clear, but I advise that you contact the local forest service
+                about trail conditions, for we encountered down trees that made the a large portion of the trail a jungle gym.
+            </p>
+            <p><a class="btn btn-secondary" href="https://clarype.github.io/TrailHead/HikeToJornLake/HikeToJornLake.html" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
 
-        <div class="col-sm-9 col-md-7 main">
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="../images/SummitLake/IMG_3245.JPG" alt="Generic placeholder image" width="140" height="140">
+            <h2>Hike to Summit Lake</h2>
+            <p>
+                The hike to summit lake is about 4.5 miles from the Pacific Crest Trail access on hwy 20.
+                In my opinion this hike is one the best hikes in the region, it’s relatively short, the overall ascent
+                is low and the views are spectacular. However, the turnoff to summit lake was a little hard to find, but
+                this keep traffic to summit lake low.
+            </p>
+            <p><a class="btn btn-secondary" href="https://clarype.github.io/TrailHead/HikeToSummitLake/HikeToSummitLake.html" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
 
-            <h1 class="page-header">
-                Backpacking The NorthWest
-            </h1>
-
-            <section data-place="overview">
-                <p>
-                    The purpose of this story map is to show and tell the adventures that my girlfriend and I go on with
-                    Finn the dog. Most of these trip so far have taken place in oregon, but I hope to expand them to the
-                    Pacific NorthWest as time goes by. I'm an geology and geospatial scientists and I love combining
-                    technology and recreation to make maps of all kinds of things. This is really just another way to
-                    help me learn about web mapping and programing languages. It is also a great way to show fellow
-                    hikers an in depth view of these trails. The images are georeferenced to the markers on the map. That
-                    is, each image was taken at the coordinates represented by the marker on the map. Each of these trails have
-                    been track by GPS with error not exceeding 12 meters so if you use the data keep that in mind. I’m going
-                    create links with KML or GPX file so people can upload the data to there own GPS receiver. This is a
-                    work in progress and continues to evolve, and I hope you enjoy it as must I do.
-                </p>
-            </section>
-
-            <section data-place="jornlake">
-                <h2>
-                    <a href="https://clarype.github.io/TrailHead/HikeToJornLake/HikeToJornLake.html" title="Click here to see more">Hike to Jorn Lake
-                        <img src="images/under-construction-2408061_960_720.png" height="50" width="50"/>
-                    </a>
-                </h2>
-                <p>
-                    The hike to Jorn Lake is approximately 7 miles into the Jefferson Wilderness in the Cascade Range of
-                    Oregon. It's not a difficult trail when clear, but I advise that you contact the local forest service
-                    about trail conditions, for we encountered down trees that made the a large portion of the trail a jungle gym.
-                </p>
-
-                <a href="images/JornLake/IMG_0269.JPG" target="_blank">
-                <img src="images/JornLake/IMG_0269.JPG" height="400" width="635"/>
-                </a>
-
-                <p>
-                    The above image is looking approximately northeast showing Jorn Lake, and the white peak is in the
-                    background is Mt. Jefferson.
-                </p>
-            </section>
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="../images/EagleCap/IMG_6803.JPG" alt="Generic placeholder image" width="140" height="140">
+            <h2>The Mirror Lake Heart Attack</h2>
+            <p>he hike to Mirror Lake is about 8 miles from the Two Pan trailhead in the Eagle Cap Wilderness
+                of Northeastern Oregon. What a place Eagle Cap is, it reminds me of the Sierra Nevadas and the
+                hike was so awesome it gave me a heart attack, for real. 8 miles into the wilderness I had a heart
+                attack, and I walked out thinking it was altitude sickness. Fun. </p>
+            <p><a class="btn btn-secondary" href="https://clarype.github.io/TrailHead/HikeToEagleCap/HikeToEagleCap.html" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
 
 
-            <section  data-place="lakeofthewoods">
-                <h2>
-                    <a href="https://clarype.github.io/TrailHead/HikeToLakeOfTheWoods/HikeToLakeOfTheWoods.html"
-                        title="Click here to see more">Hike to Lake of the Woods <img src="images/under-construction-2408061_960_720.png" height="50" width="50"/>
-                    </a>
-                </h2>
+    <!-- START THE FEATURETTES -->
 
-                <p>
-                    The hike to Lake of the Woods is a 5 mile hike into the Jefferson Wilderness in the Cascade Range
-                    of Oregon. It covers some of the same route we took on the Jorn Lake trip, but once we reached
-                    Marion Lake we head northeast. Once again check with local forest service about trail conditions.
-                    We ran into snowpack that covered large areas of the trail which made it more of an adventure.
-                </p>
+    <hr class="featurette-divider">
 
-                <a href="images//LakeOfTheWoods/IMG_6373.JPG" target="_blank">
-                <img src="images/LakeOfTheWoods/IMG_6373.JPG" height="400" width="635"/>
-                </a>
-
-                <p>
-                    The image above shows a frosty Lake of the Woods and South Cinder Peak in the background.
-                </p>
-            </section>
-
-            <section  data-place="summitlake">
-                <h2>
-                    <a href="https://clarype.github.io/TrailHead/HikeToSummitLake/HikeToSummitLake.html"
-                       title="Click here to see more">Hike to Summit Lake 
-                    </a>
-                </h2>
-
-                <p>
-                    The hike to summit lake is about 4.5 miles from the Pacific Crest Trail access on hwy 20.
-                    In my opinion this hike is one the best hikes in the region, it’s relatively short, the overall ascent
-                    is low and the views are spectacular. However, the turnoff to summit lake was a little hard to find, but 
-                    this keep traffic to summit lake low.
-                </p>
-
-                <a href="images/SummitLake/IMG_3277.JPG" target="_blank">
-                <img src="images/SummitLake/IMG_3277.JPG" height="400" width="635"/>
-                </a>
-
-                <p>
-                    The image above is Summit Lake.
-                </p>
-
-            </section>
-
-            <section data-place="eaglecap">
-                <h2>
-                    <a href="https://clarype.github.io/TrailHead/HikeToEagleCap/HikeToEagleCap.html" title="Click here
-                    to see more">The Mirror Lake Heart Attack <img src="images/under-construction-2408061_960_720.png" height="50" width="50"/>
-                    </a>
-                </h2>
-
-                <p>
-                    The hike to Mirror Lake is about 8 miles from the Two Pan trailhead in the Eagle Cap Wilderness
-                    of Northeastern Oregon. What a place Eagle Cap is, it reminds me of the Sierra Nevadas and the
-                    hike was so awesome it gave me a heart attack, for real. 8 miles into the wilderness I had a heart
-                    attack, and I walked out thinking it was altitude sickness.
-                </p>
-
-                <a href="images/EagleCap/IMG_6820.JPG" target="_blank">
-                <img src="images/EagleCap/IMG_6820.JPG" height="400" width="635"/>
-                </a>
-
-                <p>
-                    The image above is looking south at Mirror lake and the peak in the background is Eagle Cap.
-                </p>
-            </section>
-
-            <section  data-place="hikefromhell">
-                <h2>
-                    <a href="https://clarype.github.io/TrailHead/HikeFromHell/HikeFromHell.html"
-                       title="Click here to see more">Hike From Hell <img src="images/under-construction-2408061_960_720.png" height="50" width="50"/>
-                    </a>
-                </h2>
-
-                <p>
-                    This hike is about 2.5 miles long off the North Fork of the Saint Joe River in Northern Idaho. The Path is a multi-use
-                    trail for hikes, horses and dirt bikes. This was a day hike to reach a lookout station on Arid Peak.
-                    However, due to some bad trail information we miss judged the trail length and turn around halfway
-                    there. The Name is derived from the steep slope of the overall trail.
-                </p>
-
-                <a href="images/HikeFromHell/IMG_6656.JPG" target="_blank">
-                <img src="images/HikeFromHell/IMG_6656.JPG" height="400" width="635"/>
-                </a>
-
-            </section>
-
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading"> About <span class="text-muted"></span></h2>
+            <p class="lead">
+                The purpose of this story map is to show and tell the adventures that my girlfriend and I go on with
+                Finn the dog. Most of these trip so far have taken place in oregon, but I hope to expand them to the
+                Pacific NorthWest as time goes by. I'm an geology and geospatial scientists and I love combining
+                technology and recreation to make maps of all kinds of things. This is really just another way to
+                help me learn about web mapping and programing languages. It is also a great way to show fellow
+                hikers an in depth view of these trails. The images are georeferenced to the markers on the map. That
+                is, each image was taken at the coordinates represented by the marker on the map. Each of these trails have
+                been track by GPS with error not exceeding 12 meters so if you use the data keep that in mind. I’m going
+                create links with KML or GPX file so people can upload the data to there own GPS receiver. This is a
+                work in progress and continues to evolve, and I hope you enjoy it as must I do.
+            </p>
         </div>
-
-         <div id="map" class="col-xs-5 col-sm-3 col-md-5 sidebar">
-
-
-
-
-
-         </div>
-
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
+    </div>
 
-</div>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-        integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-        crossorigin=""></script>
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <hr class="featurette-divider">
 
-<script type="text/javascript" src="home.js"></script>
-<script type="text/javascript">
-    (function () {
-        'use strict';
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
 
-        var markers = {
-            jornlake: {lat: 44.515051, lon: -121.869004, zoom: 14},
-            marion: {lat: 44.561183, lon: -121.874333, zoom: 14},
-            lakeofthewoods: {lat: 44.58879, lon: -121.83952, zoom: 14},
-            summitlake: {lat: 44.46285, lon: -121.84124, zoom: 14},
-            eaglecap: {lat: 45.1793, lon: -117.3067, zoom: 14},
-            hikefromhell: {lat: 47.33158, lon: -115.75537, zoom: 14}
+    <hr class="featurette-divider">
 
-        };
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
 
+    <hr class="featurette-divider">
 
-        $('.main').storymap({markers: markers});
-
-
-
-
-
-    }());
+    <!-- /END THE FEATURETTES -->
 
 
+    <!-- FOOTER -->
+    <footer>
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+</div><!-- /.container -->
 
 
-</script>
-
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
