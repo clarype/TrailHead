@@ -7,11 +7,9 @@
             selector: '[data-place]',
             breakpointPos: '25%',
             createMap: function () {
-                // create a map in the "map" div, set the view to a given place and zoom
-                var map = L.map('map').setView([44.4457, -121.8484], 14);
 
-                // add an OpenStreetMap tile layer
-                L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+                var map = L.map('map').setView([44.4457, -121.8484], 14);
+                    L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
                     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 }).addTo(map);
 
@@ -41,6 +39,7 @@
         }
 
         function getDistanceToTop(elem, top) {
+
             var docViewTop = $(window).scrollTop();
 
             var elemTop = $(elem).offset().top;
@@ -60,7 +59,9 @@
 
             var distances = _.map(paragraphs, function (element) {
                 var dist = getDistanceToTop(element, top);
-                return {el: $(element), distance: dist};
+                return {
+                        el: $(element), distance: dist
+                };
             });
 
             var closest = _.min(distances, function (dist) {
