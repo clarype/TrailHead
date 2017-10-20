@@ -28,7 +28,8 @@ h3 {
 
 .main {
     padding: 20px;
-    padding-bottom: 1000px;
+    padding-bottom: 100px;
+
     z-index: 1001;
     display: block;
 }
@@ -107,7 +108,7 @@ h3 {
     margin: 0;
     font-size: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    opacity: 0;
+    opacity: 1;
     filter: alpha(opacity=0);
     -moz-opacity: 0;
 }
@@ -164,7 +165,7 @@ video {
 
 .viewing {
     background: #eee;
-    opacity: 1;
+    opacity: 0.9;
     filter: alpha(opacity=80);
     -moz-opacity: 0.8;
     /*-khtml-opacity: 0.8;*/
@@ -212,12 +213,12 @@ video {
     }
     .main {
         padding-right: 40px;
-        padding-left: 40px;
+        padding-left: 50px;
         width: 600px;
     }
 }
 
-@media (min-width: 0px) and (max-width: 767px) {
+@media (min-width: px) and (max-width: 767px) {
     .sidebar {
         position: fixed;
         top: 0;
