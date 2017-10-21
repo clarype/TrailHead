@@ -1,3 +1,6 @@
+/**
+ * Created by Katie on 10/21/17.
+ */
 (function ($) {
     'use strict';
 
@@ -92,18 +95,16 @@
             });
         }
 
-        var makeStoryMap = function (element, markers) {
+        var makeStoryMap = function (element, place, markers) {
 
             var topElem = $('<div class="breakpoint-current"></div>')
                 .css('top', settings.breakpointPos);
             $('body').append(topElem);
 
             var top = topElem.offset().top - $(window).scrollTop();
-
             var searchfor = settings.selector;
-
             var paragraphs = element.find(searchfor);
-
+//not sure if needed
             paragraphs.on('viewing', function () {
                 $(this).addClass('viewing');
             });
@@ -113,14 +114,14 @@
             });
 
             watchHighlight(element, searchfor, top);
-
+////
             var map = settings.createMap();
 
             var initPoint = map.getCenter();
 
             var initZoom = map.getZoom();
 
-            // var path = L.featureGroup().addto(map);
+            //var path = L.featureGroup().addto(map);
 
             var fg = L.featureGroup().addTo(map);
 
