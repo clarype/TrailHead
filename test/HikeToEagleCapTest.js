@@ -1,6 +1,4 @@
-/**
- * Created by Katie on 10/21/17.
- */
+
 (function ($) {
     'use strict';
 
@@ -27,10 +25,7 @@
                         .setContent("You clicked the map at " + e.latlng.toString())
                         .openOn(map);
                 }
-
                 map.on('click', onMapClick);
-
-
 
                 return map;
             }
@@ -62,7 +57,7 @@
 
         }
 
-        function highlightTopPara(paragraphs, top) {
+        function highlightTopPara(paragraphs, top) {                     ///parargraphs and section change
 
             var distances = _.map(paragraphs, function (element) {
                 var dist = getDistanceToTop(element, top);
@@ -95,7 +90,7 @@
             });
         }
 
-        var makeStoryMap = function (element, place, markers) {
+        var makeStoryMap = function (element, markers) {      //scenes and makers change
 
             var topElem = $('<div class="breakpoint-current"></div>')
                 .css('top', settings.breakpointPos);
@@ -120,8 +115,6 @@
             var initPoint = map.getCenter();
 
             var initZoom = map.getZoom();
-
-            //var path = L.featureGroup().addto(map);
 
             var fg = L.featureGroup().addTo(map);
 

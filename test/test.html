@@ -55,23 +55,16 @@
 </div>
 <script type="text/javascript">
 
-    var layers = {
-        'layer 1': [ L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'), '<i style="background: black; opacity: 0.5"></i><p><b>legend 1</b></p>'],
-        'layer 2': [ L.geoJson.ajax('http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ore_counties&outputFormat=application%2Fjson', {color: 'orange', weight: 5}), '<i style="background: orange; opacity: 0.5"></i><p><b>legend 2</b></p>']
-    };
 
-    var scenes = {
-        scene1: {lat: 44, lng: -123.5, zoom: 7, layers: ['layer 1'], name: "scene 1"},
-        scene2: {lat: 44.5701158, lng: -123.2949388, zoom: 14, layers: ['layer 2'], name: "scene 2"},
-        scene3: {lat: 44.5701158, lng: -123.2949388, zoom: 12, layers: ['layer 1', 'layer 2'], name: "scene 3"}
+
+    var markers = {
+        scene1: {lat: 44, lng: -123.5, zoom: 7},
+        scene2: {lat: 44.5701158, lng: -123.2949388, zoom: 14},
+        scene3: {lat: 44.5701158, lng: -123.2949388, zoom: 12}
     };
 
     $('.main').storymap({
-        scenes: scenes,
-        layers: layers,
-        legend: true,
-        scale: true,
-        navwidget: true,
+        scenes: markers,
         createMap: function () {
             var map = L.map('map', {zoomControl: false}).setView([44, -120], 7);
             L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png').addTo(map);

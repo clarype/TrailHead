@@ -1,6 +1,3 @@
-// Modified by Bo Zhao, zhao2@oregonstate.edu
-// Originally obtained from http://atlefren.github.io/storymap/
-// Updated on 5/14/2017 | version 2.22 | MIT License
 
 (function ($) {
 
@@ -9,9 +6,6 @@
         var defaults = {
             selector: '[data-scene]',
             breakpointPos: '33.333%',
-            legend: false,
-            scale: false,
-            navwidget: false,
             createMap: function () {
                 var map = L.map('map', {
                     zoomControl: false
@@ -54,6 +48,8 @@
                 };
             });
 
+            ///different from Eagle
+
             function findMin(pre, cur) {
                 if (pre.distance > cur.distance) {
                     return cur;
@@ -61,6 +57,8 @@
                     return pre;
                 }
             }
+
+
 
             var closest = distances.reduce(findMin);
 
@@ -83,6 +81,8 @@
             }
         }
 
+        //^^^
+
         function watchHighlight(element, searchfor, top) {
 
             var sections = element.find(searchfor);
@@ -99,7 +99,7 @@
         //support video for IE 8 and 9.///////////////////////////////////////////////////
         document.createElement('video');
 
-        var makeStoryMap = function (element, scenes, layers) {
+        var makeStoryMap = function (element, scenes) {
 
             var topElem = $('<div class="breakpoint-current"></div>')
                 .css('top', settings.breakpointPos);
@@ -112,6 +112,8 @@
 
             var map = settings.createMap();
             var currentLayerGroup = L.layerGroup().addTo(map);  ///not sure
+
+
 
             // make nav bar on the top.
             if ($(".navbar").length !== 0) {
@@ -128,26 +130,14 @@
 
 
 
+
+
             function showMapView(key) {
 
                 currentLayerGroup.clearLayers();
 
                 var scene = scenes[key];  //place for scene
-/*                var layernames = scene.layers;
-                var legendContent = "";
 
-                if (typeof layernames !== 'undefined' && scene.position !== "fullpage") {
-
-                    for (var i = 0; i < layernames.length; i++) {
-                        $(".loader").fadeTo(0, 1);
-                        currentLayerGroup.addLayer(layers[layernames[i]][0]);
-
-                        if (layers[layernames[i]].length === 2) {
-                            legendContent += layers[layernames[i]][1];
-                        }
-                    }
-                }
-*/
                 map.setView([scene.lat, scene.lng], scene.zoom, 1);  /////////////stopping point //////
 
             }
@@ -169,6 +159,8 @@
                         .css("display", "block");
                     $(".arrow-down").css("left", "50%");
                 }
+
+
 
                 // // Change the arrow-down icon to the home icon when reaching the last scene.
                 if ($(this).data('scene') === sections.last().data('scene')) {
@@ -224,6 +216,9 @@
             });
 
 
+
+
+
             // create a progress line
             $(window).scroll(function () {
                 var wintop = $(window).scrollTop(),
@@ -236,9 +231,11 @@
 
 
 
+
+
         };
 
-        makeStoryMap(this, settings.scenes, settings.layers);
+        makeStoryMap(this, settings.scenes);
         window.scrollTo(0, 0);
 
         return this;
