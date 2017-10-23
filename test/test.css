@@ -28,7 +28,7 @@ h3 {
 
 .main {
     padding: 20px;
-    padding-bottom: 1000px;
+    padding-bottom: 400px;
     z-index: 1001;
     display: block;
 }
@@ -251,8 +251,8 @@ video {
 }
 
 section {
-    padding: 5px 10px 10px 10px;
-    border-radius: 10px;
+    padding: 10px 10px 25px;
+    border-radius: 100px;
     background: #ccc;
     opacity: 0;
 }
@@ -264,7 +264,7 @@ section {
     cursor: pointer;
     z-index: 1005;
     font-size: 40px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(2, 118, 0, 0.6);
     text-shadow: 0 0 6px rgba(197, 197, 197, 0.95);
 }
 

@@ -50,6 +50,7 @@
 
             ///different from Eagle
 
+
             function findMin(pre, cur) {
                 if (pre.distance > cur.distance) {
                     return cur;
@@ -138,7 +139,7 @@
 
                 var scene = scenes[key];  //place for scene
 
-                map.setView([scene.lat, scene.lng], scene.zoom, 1);  /////////////stopping point //////
+                map.setView([scene.lat, scene.lng], scene.zoom, 1);
 
             }
 

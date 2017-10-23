@@ -17,12 +17,18 @@
     padding: 0;
 }
 
-
+h3 {
+    margin: 0;
+    padding-top: 100px;
+    font-family: 'open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 50px;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .95);
+}
 
 .main {
     padding: 20px;
-    padding-bottom: 500px;
-
+    padding-bottom: 400px;
     z-index: 1001;
     display: block;
 }
@@ -32,7 +38,34 @@
 }
 
 
+/*.loading-screen {*/
 
+
+/*position: fixed;*/
+
+
+/*top: 0;*/
+
+
+/*left: 0;*/
+
+
+/*width: 100%;*/
+
+
+/*height: 100%;*/
+
+
+/*background: rgba(0, 0, 0, 0.15);*/
+
+
+/*display: none;*/
+
+
+/*z-index: 1002;*/
+
+
+/*}*/
 
 .loader {
     color: rgba(255, 255, 255, 0.95);
@@ -74,7 +107,7 @@
     margin: 0;
     font-size: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    opacity: 1;
+    opacity: 0;
     filter: alpha(opacity=0);
     -moz-opacity: 0;
 }
@@ -130,8 +163,8 @@ video {
 }
 
 .viewing {
-
-    opacity: 0.9;
+    background: #eee;
+    opacity: 0.8;
     filter: alpha(opacity=80);
     -moz-opacity: 0.8;
     /*-khtml-opacity: 0.8;*/
@@ -179,12 +212,12 @@ video {
     }
     .main {
         padding-right: 40px;
-        padding-left: 50px;
+        padding-left: 40px;
         width: 600px;
     }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 767px) {
     .sidebar {
         position: fixed;
         top: 0;
@@ -231,7 +264,7 @@ section {
     cursor: pointer;
     z-index: 1005;
     font-size: 40px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(2, 118, 0, 0.6);
     text-shadow: 0 0 6px rgba(197, 197, 197, 0.95);
 }
 
