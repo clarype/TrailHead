@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c866b3f-e7d4-4509-88c8-832882e20a76" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HikeToEagleCap/EagleCap.geojson" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HikeFromHell/HellHike.geojson" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HikeToJornLake/JornLake.geojson" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HikeToLakeOfTheWoods/LakeOfTheWoods.geojson" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HikeToSummitLake/SummitLake.geojson" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.html" afterPath="$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.js" afterPath="$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/HikeToEagleCapTest.js" afterPath="$PROJECT_DIR$/test/HikeToEagleCapTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.css" afterPath="$PROJECT_DIR$/test/test.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,42 +20,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HikeToEagleCap.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HikeToEagleCap.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="3451">
               <caret line="203" column="0" lean-forward="true" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test.js">
+      <file leaf-file-name="HikeToEagleCap.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="141" column="67" lean-forward="false" selection-start-line="141" selection-start-column="67" selection-end-line="141" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="254" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="331" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="331" column="1" lean-forward="false" selection-start-line="331" selection-start-column="1" selection-end-line="331" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="4318">
+              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+              <folding>
+                <marker date="1508726012737" expanded="true" signature="548:554" ph="©" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,6 +61,7 @@
       <find>marker</find>
       <find>layers</find>
       <find>place</find>
+      <find>HikeToEagleCap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,7 +98,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-1184" />
     <option name="y" value="-8" />
     <option name="width" value="1192" />
@@ -145,21 +125,6 @@
             <path>
               <item name="TrailHead" type="b2602c69:ProjectViewProjectNode" />
               <item name="TrailHead" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TrailHead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TrailHead" type="462c0819:PsiDirectoryNode" />
-              <item name="HikeToEagleCap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TrailHead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TrailHead" type="462c0819:PsiDirectoryNode" />
-              <item name="HikeToSummitLake" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TrailHead" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TrailHead" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -199,15 +164,15 @@
       <option name="presentableId" value="Default" />
       <updated>1508008415721</updated>
       <workItem from="1508008417055" duration="2100000" />
-      <workItem from="1508714572400" duration="11117000" />
+      <workItem from="1508714572400" duration="12534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13217000" />
+    <option name="totallyTimeSpent" value="14634000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1184" y="-8" width="1192" height="640" extended-state="6" />
+    <frame x="-1184" y="-8" width="1192" height="640" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3809524" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -249,16 +214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HikeToSummitLake/HikeToSummitLake.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="127" column="18" lean-forward="false" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
-          <folding>
-            <marker date="1508714434730" expanded="true" signature="404:410" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -291,16 +246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/HikeToEagleCapTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="300" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding>
-            <marker date="1508725710120" expanded="true" signature="548:554" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Eaglecaptest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -312,20 +257,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.js">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4066">
-          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding>
-            <marker date="1508726012737" expanded="true" signature="548:554" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="141" column="67" lean-forward="false" selection-start-line="141" selection-start-column="67" selection-end-line="141" selection-end-column="67" />
+        <state relative-caret-position="445">
+          <caret line="331" column="1" lean-forward="false" selection-start-line="331" selection-start-column="1" selection-end-line="331" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -338,19 +273,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="331" column="1" lean-forward="false" selection-start-line="331" selection-start-column="1" selection-end-line="331" selection-end-column="1" />
+        <state relative-caret-position="2397">
+          <caret line="141" column="67" lean-forward="false" selection-start-line="141" selection-start-column="67" selection-end-line="141" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/HikeToEagleCapTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="88" column="49" lean-forward="false" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="49" />
+          <folding>
+            <marker date="1508725710120" expanded="true" signature="548:554" ph="©" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HikeToSummitLake/HikeToSummitLake.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="127" column="18" lean-forward="false" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+          <folding>
+            <marker date="1508714434730" expanded="true" signature="404:410" ph="©" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="3451">
           <caret line="203" column="0" lean-forward="true" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HikeFromHell/HellHike.geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HikeToJornLake/JornLake.geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HikeToSummitLake/SummitLake.geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HikeToLakeOfTheWoods/LakeOfTheWoods.geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HikeToEagleCap/HikeToEagleCap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4318">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding>
+            <marker date="1508726012737" expanded="true" signature="548:554" ph="©" />
+          </folding>
         </state>
       </provider>
     </entry>
