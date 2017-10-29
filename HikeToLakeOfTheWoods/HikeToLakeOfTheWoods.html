@@ -11,19 +11,33 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="icon" type="image/x-icon" href="../images/hiker.png">
 
+    <style>
+        h2, h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+    </style>
 
 </head>
 <body>
 
 <div class="container-fluid">
+
     <div class="row">
 
         <div class="col-sm-9 col-md-7 main">
 
-            <h1 class="page-header">Hike to Lake of the Woods</h1>
-
-
             <section data-place="overview">
+
+                <h1 class="page-header">Hike to Lake of the Woods</h1>
 
                 <a href="../images/LakeOfTheWoods/IMG_6444.JPG" target="_blank">
                 <img src="../images/LakeOfTheWoods/IMG_6444.JPG" HEIGHT="256" width="286"/>
@@ -116,6 +130,8 @@
   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
   crossorigin=""></script>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+//reads geojson
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 
 <script type="text/javascript" src="HikeToLakeOfTheWoods.js"></script>
 <script type="text/javascript">
