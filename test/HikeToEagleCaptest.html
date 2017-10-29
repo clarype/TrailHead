@@ -3,25 +3,24 @@
 <head>
     <title>Hike to Mirror Lake</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
           integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
           crossorigin=""/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <link type="text/css" rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="icon" type="image/x-icon" href="../images/hiker.png">
+
     <style>
-        h2{
+        h2, h1 {
             text-align: center;
         }
 
-        p{
+        p {
             text-align: center;
         }
+
         img {
             display: block;
             margin: auto;
@@ -39,7 +38,7 @@
         <div class="col-sm-9 col-md-7 main">
 
 
-            <section data-marker="overview">
+            <section data-place="overview">
 
                 <h1 class="page-header" align="center"> Hike to Eagle Cap</h1>
 
@@ -64,7 +63,7 @@
             </section>
 
 
-            <section data-marker="2">
+            <section data-place="2">
 
                 <h2 align="center">
                     River Crossing
@@ -83,7 +82,7 @@
 
             </section>
 
-            <section data-marker="3">
+            <section data-place="3">
 
                 <h2 align="center">
                     Switchbacks
@@ -102,7 +101,7 @@
             </section>
 
 
-            <section data-marker="5">
+            <section data-place="5">
 
                 <h2 align="center">
                     Halfway There
@@ -121,7 +120,7 @@
 
             </section>
 
-            <section data-marker="6">
+            <section data-place="6">
 
                 <h2 align="center">
                     Place along the way
@@ -140,7 +139,7 @@
 
             </section>
 
-            <section data-marker="8">
+            <section data-place="8">
 
                 <h2 align="center">
                     Almost There
@@ -162,7 +161,7 @@
 
             </section>
 
-            <section data-marker="9">
+            <section data-place="9">
 
                 <h2 align="center">
                     Worth It!
@@ -184,23 +183,21 @@
         </div>
 
         <div id="map" class="col-sm-3 col-md-5 sidebar"></div>
-        <div class="progress-line"></div>
-        <div class="animated zoomIn infinite glyphicon glyphicon-menu-down arrow-down"></div>
+
 
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
         integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
         crossorigin=""></script>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+//reads geojson
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
 
-<script type="text/javascript" src="HikeToEagleCapTest.js"></script>
+<script type="text/javascript" src="HikeToEagleCaptest.js"></script>
 <script type="text/javascript">
-
 
 
     (function () {
@@ -216,11 +213,12 @@
             6: {lat: 45.205061, lon: -117.341827, zoom: 14},
             7: {lat: 45.179367, lon: -117.315240, zoom: 14},
             8: {lat: 45.179632, lon: -117.310778, zoom: 14},
-            9: {lat: 45.179225, lon: -117.306435, zoom: 14},
+            9: {lat: 45.179225, lon: -117.306435, zoom: 14}
 
         };
 
         $('.main').storymap({markers: markers});
+
     }());
 </script>
 </body>
