@@ -57,6 +57,45 @@
 
         function highlightTopPara(paragraphs, top) {
 
+            var distances = $.map(paragraphs, function (element) {
+                var dist = getDistanceToTop(element, top);
+                return {
+                    el: $(element),
+                    distance: dist
+                };
+            });
+
+            function findMin(pre, cur) {
+                if (pre.distance > cur.distance) {
+                    return cur;
+                } else {
+                    return pre;
+                }
+            }
+
+            var closest = distances.reduce(findMin);
+
+            $.each(paragraphs, function (key, element) {
+
+                var paragraph = $(element);
+                if (paragraph[0] !== closest.el[0]) {
+                    paragraph.trigger('notviewing');
+                }
+
+                if (paragraph.height() <= $(window).height() * 0.33) {
+                    paragraph.height($(window).height() * 0.33)
+                }
+
+
+            });
+
+            if (!closest.el.hasClass('viewing')) {
+                closest.el.trigger('viewing');
+            }
+        }
+        /*
+        function highlightTopPara(paragraphs, top) {
+
             var distances = _.map(paragraphs, function (element) {
                 var dist = getDistanceToTop(element, top);
                 return {
@@ -79,7 +118,7 @@
                 closest.el.trigger('viewing');
             }
         }
-
+*/
         function watchHighlight(element, searchfor, top) {
             var paragraphs = element.find(searchfor);
             highlightTopPara(paragraphs, top);
@@ -116,14 +155,11 @@
 
             var initZoom = map.getZoom();
 
-
-
             var fg = L.featureGroup().addTo(map);
 
             var mystyle = {"color": "#ee0a13"};
 
             L.geoJson.ajax("../HikeToEagleCap/EagleCap.geojson", {style: mystyle}).addTo(map);
-
 
             function showMapView(key) {
 
@@ -142,13 +178,6 @@
                     map.setView([marker.lat, marker.lon], marker.zoom, 1);
                 }
 
-
-
-
-
-
-
-
             }
 
             paragraphs.on('viewing', function () {
@@ -156,15 +185,9 @@
             });
         };
 
-
-
-
-
-
         makeStoryMap(this, settings.markers);
 
         return this;
-
 
     }
 

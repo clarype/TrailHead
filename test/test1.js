@@ -104,7 +104,7 @@
 
 
         //support video for IE 8 and 9.
-        document.createElement('video');
+  //      document.createElement('video');
 
         var makeStoryMap = function (element, scenes, layers) {
 
@@ -119,14 +119,14 @@
 
 
             var currentLayerGroup = L.layerGroup().addTo(map);
-            var nav = $("nav");
-
+            var nav = $("nav");  //mayneed to add to eagle test
+/*
 
             if (settings.baselayer) {
                 // add an base map, which can be either OSM, mapbox, tilelayer, wmslayer or those designed by yourself.
                 settings.baselayer.layer.addTo(map);
             }
-
+*/
             if (settings.legend) {
                 $(".storymap").append("<div class='storymap-legend' />")
             }
@@ -134,23 +134,24 @@
             if (settings.scrolldown) {
                 $(".storymap").append("<div class='zoomIn infinite glyphicon glyphicon-menu-down storymap-scroll-down' />")
             }
-
+/*
             if (settings.scalebar) {
                 L.control.scale({
                     position: "bottomright",
                     metric: false
                 }).addTo(map);
             }
-
+*/
             if (settings.progressline) {
                 $(".storymap").append("<div class='storymap-progressline' />")
 
             }
-
+/*
             if (settings.navwidget) {
                 $(".storymap").append("<div class='storymap-navwidget text-center' />")
 
             }
+
 
             if (settings.loader) {
                 $(".storymap").append("<div class='glyphicon glyphicon-refresh storymap-loader' />")
@@ -167,7 +168,7 @@
 
 
             }
-
+*/
             if (settings.navbar && nav.length > 0) {
 
                 $(".navbar-header").after("<div class='collapse navbar-collapse nav navbar-nav navbar-right storymap-navbar'>");
@@ -190,7 +191,7 @@
                 });
             }
 
-
+/*
             $.each(sections, function (key, element) {
                 var section = $(element);
 
@@ -222,7 +223,7 @@
                     return String.prototype.indexOf.apply(this, arguments) !== -1;
                 };
             }
-
+*/
             // make nav bar on the top.
             if (nav.length !== 0) {
 
@@ -236,7 +237,7 @@
 
             }
 
-
+/*
             $.each(layers, function (key, layer) {
 
                 // layer = layer.layer;
@@ -246,12 +247,11 @@
                 })
 
             });
+*/
 
-
-            function showMapView(key) {
+            function showMapView(key) {           //////////////////////////
 
                 currentLayerGroup.clearLayers();
-
                 var scene = scenes[key];
                 var layernames = scene.layers;
                 var legendContent = "";
@@ -293,7 +293,7 @@
 
                 map.invalidateSize();
 
-            }
+            }                         //////////////////////////////////
 
 
             sections.on('viewing', function () {
@@ -338,7 +338,7 @@
 
             });
 
-
+//keep
             sections.on('notviewing', function () {
 
 
@@ -349,11 +349,11 @@
                         .removeClass('section-opacity');
                 }
             });
-
+//keep
             watchHighlight(element, searchfor, top);
             window.scrollTo(0, 1);
 
-
+//keep
             $('.storymap-scroll-down').click(function () {
                 var viewing = $(".viewing");
                 if (viewing.data("scene") !== $("section:last").data("scene")) {
@@ -404,7 +404,7 @@
                         $(".storymap-navwidget").append('<li><a class="glyphicon glyphicon-one-fine-full-dot" data-toggle="tooltip" title="' + sceneName + '" href="' + scrollScript + '" ></a></li>');
                     }
                 });
-
+/*
                 $('[data-toggle="tooltip"]').tooltip({
                     placement: 'right',
                     html: true
@@ -415,6 +415,7 @@
                 }, function () {
                     $(this).fadeTo(300, 0);
                 });
+*/
             }
 
         };
