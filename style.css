@@ -302,7 +302,7 @@ section {
 .legend i {
     width: 16px;
     height: 16px;
-    float: left;
+    float: right;
     margin-right: 8px;
     opacity: 0.9;
 }

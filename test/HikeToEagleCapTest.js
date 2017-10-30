@@ -6,6 +6,14 @@
         var defaults = {
             selector: '[data-place]',
             breakpointPos: '25%',
+            navbar: false,
+            navwidget: false,
+            legend: true,
+            loader: true,
+            flyto: false,
+            scalebar: false,
+            scrolldown: true,
+            progressline: true,
             createMap: function () {
 
                 var map = L.map('map').setView([45.2150, -117.3863], 13);
@@ -157,9 +165,59 @@
 
             var fg = L.featureGroup().addTo(map);
 
+            var nav = $("nav");  //mayneed to add to eagle test
+
+            if (settings.legend) {
+                $(".storymap").append("<div class='storymap-legend' />")
+            }
+
+            if (settings.scrolldown) {
+                $(".storymap").append("<div class='zoomIn infinite glyphicon glyphicon-menu-down storymap-scroll-down' />")
+            }
+
+            if (settings.progressline) {
+                $(".storymap").append("<div class='storymap-progressline' />")
+
+            }
+
+            if (settings.navbar && nav.length > 0) {
+
+                $(".navbar-header").after("<div class='collapse navbar-collapse nav navbar-nav navbar-right storymap-navbar'>");
+
+
+                $.each(paragraphs, function (key, element) {
+                    var paragraph = $(element);
+                    // if no name attribute for a specific scene, the name on the navigation bar will be the object name.
+                    if (typeof(markers[paragraph.data('marker')].name) === "undefined") {
+                       var sceneName = paragraph.data('marker');
+                    } else {
+                        sceneName = markers[paragraph.data('marker')].name.replace(" ", "&nbsp;");
+                    }
+
+                    var scrollScript = "javascript:window.scrollBy(0, $('paragraph[data-place=\\'" + paragraph.data('marker') + "\\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 10);";
+
+                    $(".storymap-navbar").append('<li><a title="' + sceneName + '" href="' + scrollScript + '" >' + sceneName + '</a></li>');
+
+
+                });
+            }
+
             var mystyle = {"color": "#ee0a13"};
 
             L.geoJson.ajax("../HikeToEagleCap/EagleCap.geojson", {style: mystyle}).addTo(map);
+
+            // make nav bar on the top.
+            if (nav.length !== 0) {
+
+                var navbar_height = nav.height();
+
+                var origin_main_top = nav.position().top;
+
+                $(".storymap-story").css({
+                    top: (navbar_height + origin_main_top).toString() + "px"
+                });
+
+            }
 
             function showMapView(key) {    /////////////////////////////
 
