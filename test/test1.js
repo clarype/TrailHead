@@ -255,6 +255,7 @@
                 var scene = scenes[key];
                 var layernames = scene.layers;
                 var legendContent = "";
+                /*
 
                 if (typeof $("section[data-scene='" + key + "']").data("background") !== 'undefined') {
 
@@ -292,7 +293,7 @@
                 }
 
                 map.invalidateSize();
-
+*/
             }                         //////////////////////////////////
 
 
