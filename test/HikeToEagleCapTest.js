@@ -6,14 +6,6 @@
         var defaults = {
             selector: '[data-place]',
             breakpointPos: '25%',
-            navbar: false,
-            navwidget: false,
-            legend: true,
-            loader: true,
-            flyto: false,
-            scalebar: false,
-            scrolldown: true,
-            progressline: true,
             createMap: function () {
 
                 var map = L.map('map').setView([45.2150, -117.3863], 13);
@@ -135,8 +127,11 @@
             });
         }
 
+
+
         var makeStoryMap = function (element, markers) {
 
+            $(element).addClass("storymap");
             var topElem = $('<div class="breakpoint-current"></div>')
                 .css('top', settings.breakpointPos);
             $('body').append(topElem);
@@ -165,8 +160,9 @@
 
             var fg = L.featureGroup().addTo(map);
 
-            var nav = $("nav");  //mayneed to add to eagle test
+            var nav = $("nav");  //mayneed to add to eagle test and not in other test
 
+                                 // these are not in old test
             if (settings.legend) {
                 $(".storymap").append("<div class='storymap-legend' />")
             }
@@ -360,7 +356,7 @@
             });
         };
 
-        makeStoryMap(this, settings.markers); ///  window.scrollTo(0, 0);
+        makeStoryMap(this, settings.markers);   window.scrollTo(0, 0);
 
 
         return this;
