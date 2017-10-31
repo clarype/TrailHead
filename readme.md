@@ -18,8 +18,8 @@ The purpose of this story map is to show and tell the adventures that my girlfri
 
 
 
-![](C:\Users\Finn\Desktop\sum.PNG)
+![](..\images\sum.PNG)
 
-![JOr](C:\Users\Finn\Desktop\JOr.PNG)
+![JOr]..\images\JOr.PNG)
 
-![wood](C:\Users\Finn\Desktop\wood.PNG)
+![wood](..\images\wood.PNG)
