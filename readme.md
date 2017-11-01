@@ -17,9 +17,6 @@ The purpose of this story map is to show and tell the adventures that my girlfri
 | **Hike To Mirror Lake**  | **WGS84**  | **21 AUG 2017**  | **Eagle Cap Wilderness, OR**  |
 
 
-Summit Lake
-(https://github.com/clarype/TrailHead/blob/master/images/sum.PNG)
-Jorn Lake
-(https://github.com/clarype/TrailHead/blob/master/images/JOr.PNG)
-Mirror Lake
-(https://github.com/clarype/TrailHead/blob/master/images/wood.PNG)
+Summit Lake (https://github.com/clarype/TrailHead/blob/master/images/sum.PNG)
+Jorn Lake (https://github.com/clarype/TrailHead/blob/master/images/JOr.PNG)
+Mirror Lake (https://github.com/clarype/TrailHead/blob/master/images/wood.PNG)
