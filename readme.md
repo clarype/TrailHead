@@ -18,7 +18,7 @@ The purpose of this story map is to show and tell the adventures that my girlfri
 
 
 
-|   Nam      |  View Vector Data                                                 |
+|   Name     |  View Vector Data                                                 |
 |------------|-------------------------------------------------------------------|
 |Summit Lake | (https://github.com/clarype/TrailHead/blob/master/images/sum.PNG) | 
 |Jorn Lake   | (https://github.com/clarype/TrailHead/blob/master/images/JOr.PNG) |
