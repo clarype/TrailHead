@@ -13,7 +13,7 @@ The data that I am using is data I collected while hiking through these regions.
 | Name                     | Projection | Date Collected   | Loacation                     |
 | ------------------------ | ---------- | ---------------- | ----------------------------- |
 | **Hike To Jorn Lake**    | **WGS84**  | **18 JUNE 2015** | **Jefferson Wilderness, OR**  |
-| **Hike To Summit Lake**  | **WGS84**  | **JULY 16 2017** | **Jefferson Wilderness, OR**  |
+| **Hike To Summit Lake**  | **WGS84**  | **16 JULY 2017** | **Jefferson Wilderness, OR**  |
 | **Hike To Mirror Lake**  | **WGS84**  | **21 AUG 2017**  | **Eagle Cap Wilderness, OR**  |
 
 
