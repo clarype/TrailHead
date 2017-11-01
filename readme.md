@@ -18,8 +18,8 @@ The purpose of this story map is to show and tell the adventures that my girlfri
 
 
 
-(..\images\sum.PNG)
+(https://github.com/clarype/TrailHead/blob/master/images/sum.PNG)
 
 (https://github.com/clarype/TrailHead/blob/master/images/JOr.PNG)
 
-(..\images\wood.PNG)
+(https://github.com/clarype/TrailHead/blob/master/images/JOr.PNG)
