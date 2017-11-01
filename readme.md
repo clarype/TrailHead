@@ -20,6 +20,6 @@ The data that I am using is data I collected while hiking through these regions.
 
 |   Name     |  View Vector Data                                                 |
 |------------|-------------------------------------------------------------------|
-|Summit Lake | (https://github.com/clarype/TrailHead/blob/master/images/sum.PNG) | 
-|Jorn Lake   | (https://github.com/clarype/TrailHead/blob/master/images/JOr.PNG) |
-|Mirror Lake | (https://github.com/clarype/TrailHead/blob/master/images/wood.PNG)|
+|Summit Lake | (https://github.com/clarype/TrailHead/blob/master/HikeToSummitLake/SummitLake.geojson) | 
+|Jorn Lake   | (https://github.com/clarype/TrailHead/blob/master/HikeToJornLake/JornLake.geojson) |
+|Mirror Lake | (https://github.com/clarype/TrailHead/blob/master/HikeToEagleCap/EagleCap.geojson)|
