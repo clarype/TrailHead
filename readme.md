@@ -8,7 +8,7 @@ The purpose of this story map is to show and tell the adventures that my girlfri
 
 **Data**
 
-**The data that I am using is data I collected while hiking through these regions. I used a Garmin GPS receiver to track my path over the duration of the trip. The data had an accuracy of  + or - 3 meters in most regions.
+The data that I am using is data I collected while hiking through these regions. I used a Garmin GPS receiver to track my path over the duration of the trip. The data had an accuracy of  + or - 3 meters in most regions.
 
 | Name                     | Projection | Date Collected   | Loacation                     |
 | ------------------------ | ---------- | ---------------- | ----------------------------- |
