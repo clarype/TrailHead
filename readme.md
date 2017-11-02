@@ -4,7 +4,7 @@
 
 **About**
 
-The purpose of this story map is to show and tell the adventures that my girlfriend and I go on with Finn the dog. Most of these trip so far have taken place in Oregon, but I hope to expand them to the Pacific Northwest as time goes by. I'm an geology and geospatial scientists and I love combining technology and recreation to make maps of all kinds of things. This is really just another way to help me learn about web mapping and programing languages. It is also a great way to show fellow hikers an in depth view of these trails. The images are georeferenced to the markers on the map. That is, each image was taken at the coordinates represented by the marker on the map. Each of these trails have been track by GPS with error not exceeding 12 meters so if you use the data keep that in mind. I’m going create links with KML or GPX file so people can upload the data to there own GPS receiver. This is a work in progress and continues to evolve, and I hope you enjoy it as must I do. https://clarype.github.io/TrailHead/
+The purpose of this story map is to show and tell the adventures that my girlfriend and I go on with Finn the dog. Most of these trip so far have taken place in Oregon, but I hope to expand them to the Pacific Northwest as time goes by. I'm an geology and geospatial scientists and I love combining technology and recreation to make maps of all kinds of things. This is really just another way to help me learn about web mapping and programing languages. It is also a great way to show fellow hikers an in depth view of these trails. The images are georeferenced to the markers on the map. That is, each image was taken at the coordinates represented by the marker on the map. Each of these trails have been track by GPS with error not exceeding 12 meters so if you use the data keep that in mind. I’m going create links with KML or GPX file so people can upload the data to there own GPS receiver. This is a work in progress and continues to evolve, and I hope you enjoy it as must I do. <a href="https://clarype.github.io/TrailHead/">Click here to see</a>
 
 **Data**
 
@@ -20,6 +20,6 @@ The data that I am using is data I collected while hiking through these regions.
 
 |   Name     |  View Vector Data (GeoJson)                                           |
 |------------|-------------------------------------------------------------------|
-|Summit Lake | (https://github.com/clarype/TrailHead/blob/master/HikeToSummitLake/SummitLake.geojson) | 
-|Jorn Lake   | (https://github.com/clarype/TrailHead/blob/master/HikeToJornLake/JornLake.geojson) |
-|Mirror Lake | (https://github.com/clarype/TrailHead/blob/master/HikeToEagleCap/EagleCap.geojson)|
+|Summit Lake | <a href="https://github.com/clarype/TrailHead/blob/master/HikeToSummitLake/SummitLake.geojson">Im data</a> | 
+|Jorn Lake   | <a href="https://github.com/clarype/TrailHead/blob/master/HikeToJornLake/JornLake.geojson">Im data</a>|
+|Mirror Lake | <a href="https://github.com/clarype/TrailHead/blob/master/HikeToEagleCap/EagleCap.geojson">Im data</a>|
