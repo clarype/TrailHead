@@ -93,7 +93,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #352208;
     background-color: #e2d171
 }
 
@@ -181,7 +181,7 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: #84581b;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects
@@ -422,7 +422,7 @@ hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid rgba(0, 0, 0, .1)
+    border-top: 1px solid rgba(132, 88, 27, .5)
 }
 
 .small, small {
@@ -1574,11 +1574,11 @@ pre code {
     padding: .5rem .75rem;
     font-size: 1rem;
     line-height: 1.25;
-    color: #00aa0a;
+    color: #352208;
     background-color: #fff;
     background-image: none;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .15);
+    border: 1px solid rgba(53, 34, 8, .15);
     border-radius: .25rem;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
 }
@@ -1606,7 +1606,7 @@ pre code {
 }
 
 .form-control::placeholder {
-    color: #868e96;
+    color: #352208;
     opacity: 1
 }
 
@@ -1984,8 +1984,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-primary {
     color: #352208;
-    background-color: #d2ff28;
-    border-color: #d2ff28;
+    background-color: #83A647;
+    border-color: #83A647;
 }
 
 .btn-primary:hover {
@@ -2010,15 +2010,15 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-secondary {
-    color: #fff;
-    background-color: #868e96;
-    border-color: #868e96
+    color: #352208;
+    background-color: #83A647;
+    border-color: #83A647;
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #727b84;
-    border-color: #6c757d
+    background-color: #436436;
+    border-color: #436436
 }
 
 .btn-secondary.focus, .btn-secondary:focus {
@@ -2255,7 +2255,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-outline-success {
-    color: #d2ff28;
+    color: #83A647;
     background-color: #352208;
     background-image: none;
     border-color: #352208;
@@ -5260,7 +5260,9 @@ a.bg-dark:focus, a.bg-dark:hover {
 }
 
 .rounded {
-    border-radius: .25rem !important
+    border-radius: .25rem;  !important
+    border-color: #83A647
+
 }
 
 .rounded-top {
@@ -5284,7 +5286,8 @@ a.bg-dark:focus, a.bg-dark:hover {
 }
 
 .rounded-circle {
-    border-radius: 50%
+    border-radius: 50%;
+    border-color: #83A647
 }
 
 .rounded-0 {
@@ -8573,7 +8576,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .text-muted {
-    color: #868e96 !important
+    color: #84581a !important
 }
 
 .text-hide {
