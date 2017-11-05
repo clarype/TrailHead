@@ -9,7 +9,7 @@
             createMap: function () {
 
                 var map = L.map('map').setView([45.2150, -117.3863], 13);
-                L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+                L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg', {
                     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 }).addTo(map);
 
