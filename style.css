@@ -165,6 +165,9 @@ video {
 
 .viewing {
     background: #e2d171;
+    border-style: solid;
+    border-color: #c84c09;
+    border-width: 15px;
     opacity: 0.8;
     filter: alpha(opacity=80);
     -moz-opacity: 0.8;
@@ -208,7 +211,7 @@ video {
         /*padding: 20px;*/
         overflow-x: hidden;
         overflow-y: hidden;
-        background-color: #e2d171;
+        background-color: white;
         width: 100%;
     }
     .main {

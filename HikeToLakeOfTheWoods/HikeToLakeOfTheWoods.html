@@ -133,8 +133,42 @@
 //reads geojson
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 
-<script type="text/javascript" src="HikeToLakeOfTheWoods.js"></script>
+<script type="text/javascript" src="../TrailHead.js"></script>
 <script type="text/javascript">
+
+    var defaults = {
+        selector: '[data-place]',
+        breakpointPos: '33.333%',
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map('map').setView([44.5782, -121.8890], 14);
+
+            // add an OpenStreetMap tile layer
+            L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var mystyle = {"color": "#ee0a13"};
+
+            L.geoJson.ajax("../HikeToLakeOfTheWoods/LakeOfTheWoods.geojson", {style: mystyle}).addTo(map);
+
+            var popup = L.popup();
+
+            function onMapClick(e) {
+                popup
+                    .setLatLng(e.latlng)
+                    .setContent("You clicked the map at " + e.latlng.toString())
+                    .openOn(map);
+            }
+
+            map.on('click', onMapClick);
+
+
+
+            return map;
+        }
+    };
+
     (function () {
         'use strict';
 

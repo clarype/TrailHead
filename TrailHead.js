@@ -1,37 +1,9 @@
 (function ($) {
-    'use strict';
 
 
-    $.fn.storymap = function(options) {
-
-        var defaults = {
-            selector: '[data-place]',
-            breakpointPos: '33.333%',
-            createMap: function () {
-                // create a map in the "map" div, set the view to a given place and zoom
-                var map = L.map('map').setView([44.5782, -121.8890], 14);
-
-                // add an OpenStreetMap tile layer
-                L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                }).addTo(map);
-
-                var popup = L.popup();
-
-                function onMapClick(e) {
-                    popup
-                        .setLatLng(e.latlng)
-                        .setContent("You clicked the map at " + e.latlng.toString())
-                        .openOn(map);
-                }
-
-                map.on('click', onMapClick);
+    $.fn.storymap = function (options) {
 
 
-
-                return map;
-            }
-        };
 
         var settings = $.extend(defaults, options);
 
@@ -122,9 +94,10 @@
 
             var fg = L.featureGroup().addTo(map);
 
-            var mystyle = {"color": "#ee0a13"};
 
-            L.geoJson.ajax("../HikeToLakeOfTheWoods/LakeOfTheWoods.geojson", {style: mystyle}).addTo(map);
+
+
+
 
 
             function showMapView(key) {
@@ -144,21 +117,19 @@
                 }
 
 
-
-
-
-
+                /*  var arrowHead = L.polylineDecorator(arrow, {
+                 patterns: [
+                 {offset: '100%', repeat: 2, symbol: L.Symbol.arrowHead({pixelSize: 15, polygon: false, pathOptions: {stroke: true}})}
+                 ]
+                 }).addTo(map);*/
 
             }
 
             paragraphs.on('viewing', function () {
                 showMapView($(this).data('place'));
             });
+
         };
-
-
-
-
 
 
         makeStoryMap(this, settings.markers);
