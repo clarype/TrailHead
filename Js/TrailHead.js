@@ -1,12 +1,8 @@
 (function ($) {
 
-
     $.fn.storymap = function (options) {
 
-
-
         var settings = $.extend(defaults, options);
-
 
         if (typeof(L) === 'undefined') {
             throw new Error('Storymap requires Laeaflet');
@@ -28,8 +24,8 @@
                 return $(document).height();
             }
             return d1;
-
         }
+
 
         function highlightTopPara(paragraphs, top) {
 
@@ -90,14 +86,18 @@
 
             var initZoom = map.getZoom();
 
-            // var path = L.featureGroup().addto(map);
-
             var fg = L.featureGroup().addTo(map);
 
+            var popup = L.popup();
 
+            function onMapClick(e) {
+                popup
+                    .setLatLng(e.latlng)
+                    .setContent(e.latlng.toString())
+                    .openOn(map);
+            }
 
-
-
+            map.on('click', onMapClick);
 
 
             function showMapView(key) {
@@ -115,14 +115,6 @@
 
                     map.setView([marker.lat, marker.lon], marker.zoom, 1);
                 }
-
-
-                /*  var arrowHead = L.polylineDecorator(arrow, {
-                 patterns: [
-                 {offset: '100%', repeat: 2, symbol: L.Symbol.arrowHead({pixelSize: 15, polygon: false, pathOptions: {stroke: true}})}
-                 ]
-                 }).addTo(map);*/
-
             }
 
             paragraphs.on('viewing', function () {
@@ -130,7 +122,6 @@
             });
 
         };
-
 
         makeStoryMap(this, settings.markers);
 
