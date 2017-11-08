@@ -134,6 +134,7 @@
                     to far and missed the turn. We found several different trail fragments that seem like a part of
                     broken network of trails to the lake.
                 </p>
+
                 <p>
                     The steep slope gives the best view of the trek showing once again, Mt Washington, the Sisters,
                     and Mt. Bachelor may be back there somewhere with Black butte on the far left. The Two lake below
@@ -199,7 +200,7 @@
             var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
             var mystyle = {"color": "#ee0a13"};
-            L.geoJson.ajax("../HikeToSummitLake/SummitLake.geojson", {style: mystyle}).addTo(map);
+            L.geoJson.ajax("../GEOJSON/SummitLake.geojson", {style: mystyle}).addTo(map);
 
             return map;
         }
