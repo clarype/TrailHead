@@ -2,29 +2,34 @@
 <html lang="en">
 <head>
     <title>HikeToJornLake</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-          integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-          crossorigin=""/>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
     <link type="text/css" rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="icon" type="image/x-icon" href="../images/hiker.png">
+    <link rel="stylesheet" href="../miniMap2.css" />
+    <link rel="stylesheet" href="../miniMap.css" />
 
     <style>
-        h2, h1{
+
+        h2, h1 {
             text-align: center;
+            color: #352208
         }
 
-        p{
+        p {
             text-align: center;
+            color: #352208
         }
+
         img {
             display: block;
             margin: auto;
         }
     </style>
-
 
 </head>
 <body>
@@ -154,33 +159,35 @@
 
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-        integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-        crossorigin=""></script>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
-//reads geojson
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js" type="text/javascript"></script>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="../miniMap.js" type="text/javascript"></script>
 <script type="text/javascript" src="../TrailHead.js"></script>
 <script type="text/javascript">
-
 
     var defaults = {
         selector: '[data-place]',
         breakpointPos: '33.333%',
         createMap: function () {
-            // create a map in the "map" div, set the view to a given place and zoom
-            var map = L.map('map').setView([44.5457, -121.9099], 13);
 
+            var map = new L.Map('map');
+            var osmUrl='https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg';
+            var osmAttrib="http://www.openstreetmap.org/copyright";
+            var osm = new L.TileLayer(osmUrl, {minZoom: 5, maxZoom: 18, attribution: osmAttrib});
 
-            // add an OpenStreetMap tile layer
-            L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg', {
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+            map.addLayer(osm);
+            map.setView(new L.LatLng(44.5457, -121.9099),13);
+
+            //Plugin magic goes here! Note that you cannot use the same layer object again, as that will confuse the two map controls
+            var osm2 = new L.TileLayer(osmUrl, {minZoom: 0, maxZoom: 5, attribution: osmAttrib });
+            var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
+
 
             var mystyle = {"color": "#c84c09" };
-
             L.geoJson.ajax("../HikeToJornLake/JornLake.geojson", {style: mystyle}).addTo(map);
 
 
