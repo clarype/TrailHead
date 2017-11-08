@@ -39,8 +39,6 @@
 
         <div class="col-sm-9 col-md-7 main">
 
-
-
             <section data-place="overview">
 
                 <h1 class="page-header">
@@ -61,12 +59,10 @@
                     </a>
                 </p>
 
-
             </section>
 
             <section data-place="start">
                 <h2>The Start</h2>
-
 
                 <a href="../images/JornLake/start.jpg" target="_blank">
                     <img src="../images/JornLake/start.jpg" style="height:533px; width:354px">
@@ -81,7 +77,6 @@
                     little trouble. Since, this trail is the closest access to Marion Lake you can expect to see more
                     hikers and even some hikers that pack boats.
                 </p>
-
 
             </section>
 
@@ -150,7 +145,6 @@
                 <p>...</p>
             </section>
 
-
         </div>
 
         <div id="map" class="col-sm-3 col-md-5 sidebar">
@@ -174,7 +168,7 @@
         breakpointPos: '33.333%',
         createMap: function () {
 
-            var map = new L.Map('map');
+            var map = new L.Map('map', { zoomControl:false });
             var osmUrl='https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg';
             var osmAttrib="http://www.openstreetmap.org/copyright";
             var osm = new L.TileLayer(osmUrl, {minZoom: 5, maxZoom: 18, attribution: osmAttrib});
@@ -190,18 +184,9 @@
             var mystyle = {"color": "#c84c09" };
             L.geoJson.ajax("../GEOJSON/JornLake.geojson", {style: mystyle}).addTo(map);
 
-
-
             return map;
         }
     };
-
-
-
-
-
-
-
 
     (function () {
         'use strict';
@@ -218,16 +203,11 @@
             OtherSide: {lat: 44.5640, lon: -121.8639, zoom: 14},
             start: {lat: 44.5764, lon: -121.8930, zoom: 14}
 
-
         };
 
         $('.main').storymap({markers: markers});
 
-
-
-
     }());
-
 
 </script>
 

@@ -187,7 +187,7 @@
         selector: '[data-place]',
         breakpointPos: '25%',
         createMap: function () {
-            var map = new L.Map('map');
+            var map = new L.Map('map', { zoomControl:false });
             var osmUrl='https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg';
             var osmAttrib="http://www.openstreetmap.org/copyright";
             var osm = new L.TileLayer(osmUrl, {minZoom: 5, maxZoom: 18, attribution: osmAttrib});

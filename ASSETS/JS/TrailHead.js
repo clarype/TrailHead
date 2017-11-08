@@ -99,6 +99,8 @@
 
             map.on('click', onMapClick);
 
+            L.control.scale().addTo(map);
+
 
             function showMapView(key) {
 
