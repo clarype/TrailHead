@@ -178,7 +178,7 @@
 
             var mystyle = {"color": "#ee0a13"};
 
-            L.geoJson.ajax("../HikeToEagleCap/EagleCap.geojson", {style: mystyle}).addTo(map);
+            L.geoJson.ajax("../HikeToEagleCap/EagleCap.js", {style: mystyle}).addTo(map);
 
 
             function showMapView(key) {
