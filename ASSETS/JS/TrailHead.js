@@ -115,7 +115,7 @@
                     }
                     fg.addLayer(L.marker([marker.lat, marker.lon]));
 
-                    map.setView([marker.lat, marker.lon], marker.zoom, 1);
+                    map.setView([marker.lat, marker.lon - 0.02], marker.zoom, 1);
                 }
             }
 
