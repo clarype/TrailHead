@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Panel On the Right</title>
+    <title>Nav Bar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,28 +12,8 @@
 
     <!--animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="test1.css">
+    <link rel="stylesheet" type="text/css" href="arrow.css">
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-
-
-    <style>
-
-
-        @media (min-width: 768px) {
-            .storymap-story {
-                position: absolute ;
-                right: 5px;
-            }
-
-            .storymap-legend {
-                left: 20px;
-
-            }
-
-        }
-
-
-    </style>
 
     <!--add required libraries-->
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
@@ -42,26 +22,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 
     <!--story map plugin-->
-    <script src="test1.js"></script>
+    <script src="ARROW.js"></script>
 </head>
 <body>
+
+<nav class="navbar-inverse navbar-fixed-top" >
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Hello, World!</a>
+        </div>
+    </div>
+</nav>
+
 <div id="storymap" class="container-fluid">
     <div class="row">
-        <div class="col-sm-6 col-md-8 map"></div>
         <div class="col-sm-6 col-md-4 storymap-story">
-            <section data-scene="scene1">
+            <section  data-scene="scene1">
                 <h2>scene 1</h2>
             </section>
-            <section data-scene="scene2">
+            <section  data-scene="scene2">
                 <h2>scene 2</h2>
             </section>
-            <section data-scene="scene3">
+            <section  data-scene="scene3">
                 <h2>scene 3</h2>
             </section>
         </div>
-
+        <div class="col-sm-6 col-md-8 storymap-map"></div>
     </div>
 </div>
+
 <script type="text/javascript">
 
     var layers = {
@@ -77,25 +67,25 @@
             legend: '<i style="background: orange; opacity: 0.5"></i><p><b>legend 2</b></p>'
         },
         layer3: {
-            layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')
+            layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}@2x.png')
         }
     };
 
     var scenes = {
-        scene1: {lat: 44, lng: -123.5, zoom: 7, layers: ['layer2'], name: "scene 1"},
-        scene2: {lat: 44.5701158, lng: -123.2949388, zoom: 10, layers: ['layer2'], name: "scene 2"},
-        scene3: {lat: 44.5701158, lng: -123.2949388, zoom: 12, layers: ['layer1', 'layer2'], name: "scene 3"}
+        scene1: {lat: 44, lng: -123.5, zoom: 7,  name: "scene 1"},
+        scene2: {lat: 44.5701158, lng: -123.2949388, zoom: 10,  name: "scene 2"},
+        scene3: {lat: 44.5701158, lng: -123.2949388, zoom: 12, name: "scene 3"}
     };
+
 
     $('#storymap').storymap({
         scenes: scenes,
-        layers: layers,
         baselayer: layers.layer3,
+        navbar: true,
         legend: true,
-        loader: true,
-        flyto: false,
-        credits: "build with<i class='glyphicon glyphicon-heart' style='color: red'></i> from Bo Zhao",
-        scalebar: true,
+        loader: false,
+        flyto: true,
+        scalebar: false,
         scrolldown: true,
         progressline: true,
         navwidget: true,
@@ -105,6 +95,8 @@
             return map;
         }
     });
+
+
 </script>
 </body>
 </html>

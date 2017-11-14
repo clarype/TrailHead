@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
     <link type="text/css" rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/miniMap2.css"
-    />
+    <link rel="stylesheet" href="../CSS/miniMap2.css"/>
     <link rel="stylesheet" href="../CSS/miniMap.css" />
 
     <style>
@@ -186,6 +185,13 @@
 
         <div id="map" class="col-sm-3 col-md-5 sidebar"></div>
 
+
+        <!--add a scrolling down arrow-->
+        <div class="animated zoomIn infinite glyphicon glyphicon-menu-down arrow-down"></div>
+
+        <!--add a progress line-->
+        <div class="progress-line"></div>
+
     </div>
 </div>
 
@@ -215,7 +221,7 @@
             var osm2 = new L.TileLayer(url, {minZoom: 0, maxZoom: 5, attribution: attr });
             var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
-            var mystyle = {"color": "#ee0a13"};
+            var mystyle = {"color": "#ffffff"};
             L.geoJson.ajax("../GEOJSON/EagleCap.geojson", {style: mystyle}).addTo(map);
 
             return map;
