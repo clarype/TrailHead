@@ -90,6 +90,16 @@
 
             var popup = L.popup();
 
+            var greenIcon = L.icon({
+                iconUrl: '../images/hiker.png',
+
+                iconSize:     [35, 35], // size of the icon
+                iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+                popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+            });
+
+
+
             function onMapClick(e) {
                 popup
                     .setLatLng(e.latlng)
@@ -113,9 +123,9 @@
                     if (typeof layer !== 'undefined') {
                         fg.addLayer(layer);
                     }
-                    fg.addLayer(L.marker([marker.lat, marker.lon]));
+                    fg.addLayer(L.marker([marker.lat, marker.lon], {icon: greenIcon}));
 
-                    map.setView([marker.lat, marker.lon - 0.02], marker.zoom, 1);
+                    map.setView([marker.lat, marker.lon - 0.005], marker.zoom, 1);
                 }
             }
 
