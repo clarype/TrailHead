@@ -89,3 +89,19 @@ body {
         margin-top: 7rem;
     }
 }
+
+/* socail
+---------------------------------------------- */
+.social {
+    position: static;
+    cursor: pointer;
+    font-size:30px;
+    color:darkgray;
+    z-index:1003;
+    top: 4%;
+    left:5px;
+}
+.social:hover {
+    color: darkblue;
+    text-decoration: none;
+}
