@@ -7,12 +7,8 @@
         if (typeof(L) === 'undefined') {
             throw new Error('Storymap requires Laeaflet');
         }
-        if (typeof(_) === 'undefined') {
-            throw new Error('Storymap requires underscore.js');
-        }
 
         function getDistanceToTop(elem, top) {
-
             var docViewTop = $(window).scrollTop();
 
             var elemTop = $(elem).offset().top;
@@ -36,7 +32,7 @@
             });
 
             var closest = _.min(distances, function (dist) {
-                return dist.distance;
+                return dist.distance;              ////////////////////////////////////////
             });
 
             _.each(paragraphs, function (element) {
@@ -71,12 +67,12 @@
 
             var paragraphs = element.find(searchfor);
 
-            paragraphs.on('viewing', function () {
-                $(this).addClass('viewing');
+            paragraphs.on('viewing', function () {   ///////////////////////////////////////
+                $(this).addClass('viewing');         /////////////////////////////////////
             });
 
-            paragraphs.on('notviewing', function () {
-                $(this).removeClass('viewing');
+            paragraphs.on('notviewing', function () { ////////////////////////////////
+                $(this).removeClass('viewing');        ///////////////////////////////
             });
 
             watchHighlight(element, searchfor, top);
@@ -90,6 +86,16 @@
             var fg = L.featureGroup().addTo(map);
 
             var popup = L.popup();
+
+            var greenIcon = L.icon({
+                iconUrl: '../images/hiker.png',
+
+                iconSize:     [35, 35], // size of the icon
+                iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+                popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+            });
+
+
 
             function onMapClick(e) {
                 popup
@@ -116,7 +122,7 @@
                     }
                     fg.addLayer(L.marker([marker.lat, marker.lon]));
 
-                    map.setView([marker.lat, marker.lon], marker.zoom, 1);
+                    map.setView([marker.lat, marker.lon - 0.005], marker.zoom, 1);
                 }
             }
 

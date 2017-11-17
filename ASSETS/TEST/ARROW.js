@@ -15,11 +15,11 @@
             loader: true,
             flyto: false,
             scalebar: false,
-            scrolldown: true,
+            scrolldown: false,
             progressline: true,
             createMap: function () {
                 var map = L.map($('.storymap-map')[0], {zoomControl: false}).setView([44, -120], 7);
-                L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}@2x.png').addTo(map);
+                L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg').addTo(map);
                 return map;
             }
         };
@@ -51,11 +51,21 @@
 
             var distances = $.map(sections, function (element) {
                 var dist = getDistanceToTop(element, top);
-                return {el: $(element), distance: dist};
+                return {
+                    el: $(element),
+                    distance: dist
+                };
             });
 
-            var closest = distances.reduce(findMin);
+            function findMin(pre, cur) {
+                if (pre.distance > cur.distance) {
+                    return cur;
+                } else {
+                    return pre;
+                }
+            }
 
+            var closest = distances.reduce(findMin);
 
             $.each(sections, function (key, element) {
 
@@ -68,16 +78,8 @@
                     section.height($(window).height() * 0.33)
                 }
 
+
             });
-
-            function findMin(pre, cur) {
-                if (pre.distance > cur.distance) {
-                    return cur;
-                } else {
-                    return pre;
-                }
-            }
-
 
             if (!closest.el.hasClass('viewing')) {
                 closest.el.trigger('viewing');
