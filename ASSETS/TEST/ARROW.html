@@ -64,7 +64,7 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Hello, World!</a>
+            <a class="navbar-brand" href="#">Backpacking the Northwest</a>
         </div>
     </div>
 </nav>
@@ -218,27 +218,49 @@
 <script type="text/javascript">
 
     var layers = {
-        layer1: {
-            layer: L.marker([45.250149, -117.376809])
 
-        },
-        layer2: {
+        layer1: {
             layer: L.geoJson.ajax('../GEOJSON/EagleCap.geojson')
 
         },
+        layer2: {
+            layer: L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/' +
+                '{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg')
+        },
         layer3: {
-            layer: L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg')
+            layer: L.marker([45.241031, -117.366729])
+
+        },
+        layer4: {
+            layer: L.marker([45.232470,-117.360497])
+
+        },
+        layer5: {
+            layer: L.marker([45.219528, -117.349933])
+
+        },
+        layer6: {
+            layer: L.marker([45.205061,-117.341827])
+
+        },
+        layer7: {
+            layer: L.marker([45.179632, -117.310778])
+
+        },
+        layer8: {
+            layer: L.marker([45.179225, -117.306435])
+
         }
     };
 
     var scenes = {
-        scene1: {lat: 45.2150, lng: -117.3863, zoom: 13, layers: ['layer2','layer1'], name: "scene 1"},
-        scene2: {lat: 45.241031, lng: -117.366729, zoom: 15,  name: "scene 2"},
-        scene3: {lat: 45.232470, lng:-117.360497, zoom: 15,  name: "scene 3"},
-        scene4: {lat: 45.219528, lng:  -117.349933, zoom: 15, name: "scene 4"},
-        scene5: {lat: 45.205061, lng:-117.341827, zoom: 15,  name: "scene 5"},
-        scene6: {lat: 45.179632, lng: -117.310778, zoom: 15,  name: "scene 6"},
-        scene7: {lat: 45.179225, lng: -117.306435, zoom: 15, name: "scene 7"}
+        scene1: {lat: 45.2150, lng: -117.3863, zoom: 13, layers: ['layer1'], name: "scene1"},
+        scene2: {lat: 45.241031, lng: -117.366729, zoom: 15, layers: ['layer1','layer3'],  name: "scene2"},
+        scene3: {lat: 45.232470, lng:-117.360497, zoom: 15, layers: ['layer1','layer4'], name: "scene3"},
+        scene4: {lat: 45.219528, lng:  -117.349933, zoom: 15, layers: ['layer1','layer5'], name: "scene4"},
+        scene5: {lat: 45.205061, lng:-117.341827, zoom: 15, layers: ['layer1','layer6'],  name: "scene5"},
+        scene6: {lat: 45.179632, lng: -117.310778, zoom: 15, layers: ['layer1','layer7'], name: "scene6"},
+        scene7: {lat: 45.179225, lng: -117.306435, zoom: 15, layers: ['layer1','layer8'],  name: "scene7"}
 
     };
 
@@ -248,11 +270,11 @@
     $('#storymap').storymap({
         scenes: scenes,
         layers: layers,
-        baselayer: layers.layer3,
+        baselayer: layers.layer2,
         legend: true,
         loader: false,
         flyto: true,
-        credits: "build with<i class='glyphicon glyphicon-heart animated zoomIn infinite' style='color: red'></i> from Bo Zhao and reconfigured by Peter Clary",
+        credits: "build with<i class='glyphicon glyphicon-heart animated zoomIn infinite' style='color: red'></i>from Peter Clary",
         scalebar: true,
         scrolldown: true,
         progressline: true,

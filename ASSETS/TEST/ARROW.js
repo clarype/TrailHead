@@ -11,12 +11,12 @@
             triggerpos: '33.333%',
             navbar: false,
             navwidget: false,
-            legend: true,
-            loader: true,
+            legend: false,
+            loader: false,
             flyto: false,
             scalebar: false,
             scrolldown: false,
-            progressline: true,
+            progressline: false,
             createMap: function () {
                 var map = L.map($('.storymap-map')[0], {zoomControl: false}).setView([44, -120], 7);
                 L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg').addTo(map);
@@ -295,7 +295,7 @@
             sections.on('viewing', function () {
 
                 $(this).addClass('viewing');
-                var scrollDown = $(".storymap-scroll-down")
+                var scrollDown = $(".storymap-scroll-down");
 
                 scrollDown.css("left", "2%");
 
