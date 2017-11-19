@@ -7,6 +7,7 @@ body {
     height: 100%;
     font-family: Cairo, sans-serif;
     font-size: 14px;
+    color: #352208
 }
 
 .cesium-viewer-cesiumWidgetContainer {
@@ -23,12 +24,10 @@ body {
 }
 
 h1 {
-    margin: 20px;
-    padding-top: 100px;
-    font-family: Cairo, sans-serif;
+    margin: 0;
+    font-family: 'open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     color: rgba(255, 255, 255, 0.95);
     font-size: 50px;
-    text-shadow: 0 0 6px rgba(0, 0, 0, .95);
 }
 
 .storymap-trigger {
@@ -103,18 +102,22 @@ h1 {
 
 section {
 
-    padding: 5px 15px 10px 15px;
+    padding: 10px 10px 25px;
     margin: 5px;
-    border-radius: 5px;
-    background: #eee;
+    border-radius: 100px;
+    background: #e2d171;
     opacity: 0;
     /*color: #111111;*/
 }
 
 .viewing {
+    background: #e2d171;
+    border-style: solid;
+    border-color: #c84c09;
+    border-width: 15px;
     color: #1c1c1c;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
-    opacity: 0.8;
+    opacity: 1;
     filter: alpha(opacity=80);
     -moz-opacity: 0.8;
 }
@@ -242,13 +245,13 @@ video {
     cursor: pointer;
     z-index: 1001;
     font-size: 40px;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow:  0 1px 1px rgba(197, 197, 197, 0.95);
+    color: #83A647;
+    text-shadow:  0 5px 5px rgba(67, 100, 54, 0.95);
 }
 
 .storymap-scroll-down:hover {
-    color: rgba(200, 200, 200, 0.9);
-    text-shadow:  0 1px 1px rgba(150, 150, 150, 0.95);
+    color: rgba(67, 100, 54, 0.9);
+    text-shadow:  0 5px 5px rgba(131, 166, 71, 0.95);
 }
 
 
@@ -311,7 +314,7 @@ video {
     width: 0;
     height: 3px;
     z-index: 1030;
-    background: rgba(255, 30, 0, 0.80);
+    background:#c84c09;
     box-shadow: 0 0 2px rgba(98, 16, 0, 0.9);
 }
 
@@ -325,6 +328,11 @@ nav li a,
     padding-top: 6px !important;
     padding-bottom: 0 !important;
     height: 28px;
+}
+.navbar-inverse{
+    background-color: #352208;
+    border-color:#c84c09;
+    border-width: 50px;
 }
 
 .btn {

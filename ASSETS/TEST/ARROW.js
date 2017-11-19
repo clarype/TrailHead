@@ -96,7 +96,10 @@
             });
 
 
+
+
         }
+
 
 
         //support video for IE 8 and 9.
@@ -156,7 +159,7 @@
 
             $(".storymap-map .leaflet-control-attribution")
                 .addClass("storymap-attribution")
-                .html("<a href='https://github.com/jakobzhao/storymap'><img src='../../img/logo.png' width='18px' target='_blank' > storymap.js </a>");
+                .html("<a href='https://github.com/clarype/Trailhead'><img width='18px' target='_blank' > storymap.js </a>");
 
             if (settings.credits) {
                 $(".storymap-attribution").find("a").prepend(settings.credits + " | ");
@@ -233,6 +236,7 @@
             }
 
 
+
             $.each(layers, function (key, layer) {
 
                 // layer = layer.layer;
@@ -244,6 +248,9 @@
             });
 
 
+
+
+
             function showMapView(key) {
 
                 currentLayerGroup.clearLayers();
@@ -251,6 +258,7 @@
                 var scene = scenes[key];
                 var layernames = scene.layers;
                 var legendContent = "";
+
 
                 if (typeof $("section[data-scene='" + key + "']").data("background") !== 'undefined') {
 
@@ -281,9 +289,9 @@
                 }
 
                 if (settings.flyto) {
-                    map.flyTo([scene.lat, scene.lng], scene.zoom, 1)
+                    map.flyTo([scene.lat, scene.lng - 0.009], scene.zoom, 1)
                 } else {
-                    map.setView([scene.lat, scene.lng], scene.zoom, 1)
+                    map.setView([scene.lat, scene.lng ], scene.zoom, 1)
 
                 }
 
@@ -355,7 +363,7 @@
                 var viewing = $(".viewing");
                 if (viewing.data("scene") !== $("section:last").data("scene")) {
 
-                    if (nav.length !== 0) {
+                    if (nav.length == 0) {
                         window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - $('.storymap-navbar').height() - 10);
                     } else {
                         window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 10);
