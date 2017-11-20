@@ -245,13 +245,13 @@ video {
     cursor: pointer;
     z-index: 1001;
     font-size: 40px;
-    color: #83A647;
-    text-shadow:  0 5px 5px rgba(67, 100, 54, 0.95);
+    color: #c84c09;
+    text-shadow:  0 5px 5px rgba(226, 209, 113, 0.95);
 }
 
 .storymap-scroll-down:hover {
-    color: rgba(67, 100, 54, 0.9);
-    text-shadow:  0 5px 5px rgba(131, 166, 71, 0.95);
+    color: rgba(226, 209, 113, 0.9);
+    text-shadow:  0 5px 5px rgba(200, 76, 9, 0.95);
 }
 
 
@@ -314,8 +314,8 @@ video {
     width: 0;
     height: 3px;
     z-index: 1030;
-    background:#c84c09;
-    box-shadow: 0 0 2px rgba(98, 16, 0, 0.9);
+    background: #e2d171;
+    box-shadow: 0 0 2px rgba(200, 76, 9, 0.9);
 }
 
 
@@ -329,6 +329,13 @@ nav li a,
     padding-bottom: 0 !important;
     height: 28px;
 }
+
+.fa{
+    font-size: xx-large;
+    padding-top: 1px;
+
+}
+
 .navbar-inverse{
     background-color: #352208;
     border-color:#c84c09;

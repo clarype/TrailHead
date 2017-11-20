@@ -289,7 +289,7 @@
                 }
 
                 if (settings.flyto) {
-                    map.flyTo([scene.lat, scene.lng - 0.009], scene.zoom, 1)
+                    map.flyTo([scene.lat, scene.lng - 0.005], scene.zoom, 1)
                 } else {
                     map.setView([scene.lat, scene.lng ], scene.zoom, 1)
 
@@ -366,7 +366,7 @@
                     if (nav.length == 0) {
                         window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - $('.storymap-navbar').height() - 10);
                     } else {
-                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 10);
+                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 100);
                     }
                 } else {
                     window.scrollTo(0, 0);
