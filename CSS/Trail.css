@@ -358,3 +358,10 @@ nav li a,
     color: rgba(0, 117, 255, 0.6);
     text-decoration: none;
 }
+
+.Finn {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}

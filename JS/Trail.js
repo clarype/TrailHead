@@ -364,9 +364,9 @@
                 if (viewing.data("scene") !== $("section:last").data("scene")) {
 
                     if (nav.length == 0) {
-                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - $('.storymap-navbar').height() - 10);
+                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - $('.storymap-navbar').height() - 50);
                     } else {
-                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 100);
+                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 25);
                     }
                 } else {
                     window.scrollTo(0, 0);
