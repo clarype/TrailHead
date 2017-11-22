@@ -102,7 +102,7 @@ h1 {
 
 section {
 
-    padding: 10px 10px 25px;
+    padding: 10px 10px 40px;
     margin: 5px;
     border-radius: 100px;
     background: #e2d171;
@@ -245,13 +245,13 @@ video {
     cursor: pointer;
     z-index: 1001;
     font-size: 40px;
-    color: #c84c09;
-    text-shadow:  0 5px 5px rgba(226, 209, 113, 0.95);
+    color: #e2d171;
+    text-shadow:  0 5px 5px rgba(200, 76, 9, 0.95);
 }
 
 .storymap-scroll-down:hover {
-    color: rgba(226, 209, 113, 0.9);
-    text-shadow:  0 5px 5px rgba(200, 76, 9, 0.95);
+    color: rgba(200, 76, 9, 0.9);
+    text-shadow:  0 5px 5px rgba(226, 209, 113, 0.95);
 }
 
 
@@ -359,9 +359,3 @@ nav li a,
     text-decoration: none;
 }
 
-.Finn {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-
-}

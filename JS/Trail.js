@@ -366,7 +366,7 @@
                     if (nav.length == 0) {
                         window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - $('.storymap-navbar').height() - 50);
                     } else {
-                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 25);
+                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 50);
                     }
                 } else {
                     window.scrollTo(0, 0);
