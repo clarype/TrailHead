@@ -26,8 +26,17 @@ body {
 h1 {
     margin: 0;
     font-family: 'open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    color: #352208;
     font-size: 50px;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    text-align: center;
+    color: #352208;
+    font-size: 25px;
 }
 
 .storymap-trigger {
@@ -244,7 +253,7 @@ video {
     left: 2%;
     cursor: pointer;
     z-index: 1001;
-    font-size: 40px;
+    font-size: 80px;
     color: #e2d171;
     text-shadow:  0 5px 5px rgba(200, 76, 9, 0.95);
 }
@@ -308,7 +317,7 @@ video {
 }
 
 .storymap-progressline {
-    position: fixed;
+    position:fixed;
     top: 0;
     left: 0;
     width: 0;
@@ -357,5 +366,14 @@ nav li a,
 .btn:hover {
     color: rgba(0, 117, 255, 0.6);
     text-decoration: none;
+}
+
+.img-bor {
+    max-width: 100%;
+    height: auto;
+    padding: 0%;
+    background-color: #c84c09;
+    border: 1px solid #c84c09;
+    border-radius: 5%;
 }
 

@@ -8,7 +8,7 @@
 
         var defaults = {
             selector: '[data-scene]',
-            triggerpos: '33.333%',
+            triggerpos: '15.333%',
             navbar: false,
             navwidget: false,
             legend: false,
@@ -19,7 +19,7 @@
             progressline: false,
             createMap: function () {
                 var map = L.map($('.storymap-map')[0], {zoomControl: false}).setView([44, -120], 7);
-                L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg').addTo(map);
+                L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg', {detectRetina:ture}).addTo(map);
                 return map;
             }
         };
@@ -74,8 +74,8 @@
                     section.trigger('notviewing');
                 }
 
-                if (section.height() <= $(window).height() * 0.33) {
-                    section.height($(window).height() * 0.33)
+                if (section.height() <= $(window).height() * 0.15) {
+                    section.height($(window).height() * 0.15)
                 }
 
 
@@ -159,7 +159,7 @@
 
             $(".storymap-map .leaflet-control-attribution")
                 .addClass("storymap-attribution")
-                .html("<a href='https://github.com/clarype/Trailhead'><img width='18px' target='_blank' > storymap.js </a>");
+                .html("<a href='https://github.com/clarype/Trailhead'> storymap.js </a>");
 
             if (settings.credits) {
                 $(".storymap-attribution").find("a").prepend(settings.credits + " | ");
@@ -305,7 +305,7 @@
                 $(this).addClass('viewing');
                 var scrollDown = $(".storymap-scroll-down");
 
-                scrollDown.css("left", "2%");
+                scrollDown.css("left", "50%");
 
                 if (typeof $(this).data("background") !== 'undefined') {
                     $(this)
