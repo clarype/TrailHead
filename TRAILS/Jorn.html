@@ -84,7 +84,7 @@
 
                 <p>
                     <a href="../images/JornLake/IMG_0269.JPG" target="_blank"><img>
-                        <img  class="img-bor" src="../images/JornLake/IMG_0269.JPG" height="223.5" width="403.5"/>
+                        <img  class="img-bor" src="../images/JornLake/IMG_0269.JPG" />
                     </a>
                 </p>
 
@@ -94,7 +94,7 @@
                 <h2>The Start</h2>
 
                 <a href="../images/JornLake/start.jpg" target="_blank">
-                    <img class="img-bor" src="../images/JornLake/start.jpg" style="height:533px; width:354px">
+                    <img class="img-bor" src="../images/JornLake/start.jpg" >
                 </a>
 
                 <p>
@@ -237,7 +237,10 @@
 
         },
         layer8: {
-            layer: L.geoJson.ajax('../GEOJSON/JornLake.geojson')
+            layer: L.geoJson.ajax('../GEOJSON/JornLake.geojson', {
+                color: 'red',
+                weight: 5
+            })
 
         },
         layer9: {
