@@ -159,7 +159,7 @@
 
             $(".storymap-map .leaflet-control-attribution")
                 .addClass("storymap-attribution")
-                .html("<a href='https://github.com/clarype/Trailhead'> storymap.js </a>");
+                .html("<a href='https://github.com/clarype/Trailhead'> Trail.js </a>");
 
             if (settings.credits) {
                 $(".storymap-attribution").find("a").prepend(settings.credits + " | ");

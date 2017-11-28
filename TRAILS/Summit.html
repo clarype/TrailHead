@@ -67,6 +67,7 @@
         <div>
             <a class="fa fa-facebook-square social" href="https://www.facebook.com/sharer/sharer.php?u=https://clarype.github.io/TrailHead/" target="_blank"></a>
             <a class="fa fa-twitter-square social"   href="https://twitter.com/intent/tweet"> </a>
+            <a class="fa fa-github" href="https://clarype.github.io/TrailHead/"></a>
         </div>
     </div>
 </nav>
@@ -272,7 +273,7 @@
     };
 
     var scenes = {
-        scene1: {lat: 44.4445, lng: -121.8644, zoom: 14, name: "scene1", layers: ['layer1', 'layer7', 'layer8']},
+        scene1: {lat: 44.4445, lng: -121.85, zoom: 14, name: "scene1", layers: ['layer1', 'layer7', 'layer8']},
         scene2: {lat: 44.4255, lng: -121.8493, zoom: 16, layers: ['layer1', 'layer2', 'layer8'],  name: "scene2"},
         scene3: {lat: 44.4344, lng:-121.8531, zoom: 16, layers: ['layer3', 'layer8' ], name: "scene3"},
         scene4: {lat: 44.4441, lng:  -121.8445, zoom: 16, layers: ['layer4','layer8'], name: "scene4"},
@@ -291,7 +292,7 @@
         legend: false,
         loader: false,
         flyto: true,
-        credits: "<i class='glyphicon glyphicon-tree-conifer animated zoomIn infinite' style='color: green'></i> Peter Clary",
+        credits: "Click here to see data sources<i class='glyphicon glyphicon-tree-conifer animated zoomIn infinite' style='color: green'></i> by Peter Clary",
         scalebar: true,
         scrolldown: true,
         progressline: true,
@@ -302,7 +303,7 @@
             var url='https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg',
                 attr="http://www.openstreetmap.org/copyright";
 
-            service = new L.TileLayer(url, {minZoom: 5, maxZoom: 18, attribution: attr});
+            service = new L.TileLayer(url, {minZoom: 0, maxZoom: 6, attribution: attr});
 
             var bounds = new L.LatLngBounds(new L.LatLng(44.4445, -121.8644), new L.LatLng(45, -117));
 
@@ -315,7 +316,7 @@
             map.addLayer(service).fitBounds(bounds);
             map.setView(new L.LatLng(44.4445, -121.8644),13);
 
-            var osm2 = new L.TileLayer(url, {minZoom: 5, maxZoom: 18, attribution: attr});
+            var osm2 = new L.TileLayer(url, {minZoom: 0, maxZoom: 6, attribution: attr});
             var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
 

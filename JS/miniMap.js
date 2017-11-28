@@ -11,7 +11,7 @@ L.Control.MiniMap = L.Control.extend({
         autoToggleDisplay: false,
         width: 150,
         height: 150,
-        aimingRectOptions: {color: "#ff7800", weight: 1, clickable: false},
+        aimingRectOptions: {color: "#000000", weight: 1, clickable: false},
         shadowRectOptions: {color: "#000000", weight: 1, clickable: false, opacity:0, fillOpacity:0}
     },
 
