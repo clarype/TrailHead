@@ -19,35 +19,41 @@
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../CSS/Trail.css">
-
+    <!--minimap-->
     <link rel="stylesheet" href="../CSS/miniMap2.css"/>
     <link rel="stylesheet" href="../CSS/miniMap.css" />
-
+    <!--elevation profile-->
+    <link rel="stylesheet" href="../CSS/profile.css" />
 
 
     <!--add required libraries-->
+    <!--elevation profile-->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <!--leaflet-->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.1/leaflet.js"></script>
     <!--jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--boostrap-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--leaflet.ajax for asynchronously adding geojson data-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
-
     <!--MiniMap-->
     <script src="../JS/miniMap.js" type="text/javascript"></script>
     <!--story map plugin-->
     <script src="../JS/Trail.js"></script>
+    <!--elevation profile-->
+    <script type="text/javascript" src="../JS/profile.js"></script>
+    <script type="text/javascript" src="../profiles/summit.js"></script>
 
 
     <style>
+        .leaflet-top{
+            top: 50px;
+        }
 
         .page-header {
             border-bottom: 2px solid #c84c09;
         }
-
     </style>
 </head>
 <body>
@@ -249,11 +255,14 @@
 
         },
         layer7: {
-            layer: L.marker([44.4628, -121.8414], {icon: campsite})
+            layer: L.marker([44.46281, -121.8411], {icon: campsite})
 
         },
         layer8: {
-            layer: L.geoJson.ajax('../GEOJSON/SummitLake.geojson')
+            layer: L.geoJson.ajax('../GEOJSON/SummitLake.geojson', {
+                
+
+                })
 
         },
         layer9: {
@@ -282,7 +291,7 @@
         legend: false,
         loader: false,
         flyto: true,
-        credits: "build with<i class='glyphicon glyphicon-heart animated zoomIn infinite' style='color: red'></i>from Peter Clary",
+        credits: "<i class='glyphicon glyphicon-tree-conifer animated zoomIn infinite' style='color: green'></i> Peter Clary",
         scalebar: true,
         scrolldown: true,
         progressline: true,
@@ -293,12 +302,20 @@
             var url='https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg',
                 attr="http://www.openstreetmap.org/copyright";
 
-            var bounds = new L.TileLayer(url, {minZoom: 5, maxZoom: 18, attribution: attr});
+            service = new L.TileLayer(url, {minZoom: 5, maxZoom: 18, attribution: attr});
 
-            map.addLayer(bounds);
-            map.setView(new L.LatLng(44.4445, -121.8644),14);
+            var bounds = new L.LatLngBounds(new L.LatLng(44.4445, -121.8644), new L.LatLng(45, -117));
 
-            var osm2 = new L.TileLayer(url, {minZoom: 0, maxZoom: 5, attribution: attr });
+            var el = L.control.elevation();
+            el.addTo(map);
+            var gjl = L.geoJson(summit,{
+                onEachFeature: el.addData.bind(el)
+            }).addTo(map);
+
+            map.addLayer(service).fitBounds(bounds);
+            map.setView(new L.LatLng(44.4445, -121.8644),13);
+
+            var osm2 = new L.TileLayer(url, {minZoom: 5, maxZoom: 18, attribution: attr});
             var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
 

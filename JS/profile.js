@@ -12,9 +12,15 @@ L.Control.Elevation = L.Control.extend({
         xTicks: void 0,
         yTicks: void 0,
         collapsed: !1
-    }, onRemove: function () {
+
+    },
+
+        onRemove: function () {
         this._container = null, this._data = null, this._dist = null
-    }, onAdd: function (a) {
+
+    },
+
+        onAdd: function (a) {
         this._map = a;
         var b = this.options, c = b.margins;
         b.width = b.width - c.left - c.right, b.height = b.height - c.top - c.bottom, b.xTicks = b.xTicks || Math.round(b.width / 75), b.yTicks = b.yTicks || Math.round(b.height / 30), b.hoverNumber.formatter = b.hoverNumber.formatter || this._formatter, d3.select("body").classed(b.theme, !0);

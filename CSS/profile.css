@@ -14,7 +14,7 @@
 }
 
 .lime-theme .leaflet-control.elevation .area {
-    fill: #e2d171
+    fill: rgba(226, 209, 113, 0.6);
 }
 
 .lime-theme .leaflet-control.elevation .mouse-focus-line {

@@ -1,4 +1,7 @@
-
+/**
+ * Created by clarype on 11/28/2017.
+ */
+var summit =
     {
         "type": "FeatureCollection",
         "features": [
