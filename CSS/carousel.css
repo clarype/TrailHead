@@ -96,12 +96,12 @@ body {
     position: static;
     cursor: pointer;
     font-size:30px;
-    color:darkgray;
+    color: #e2d171;
     z-index:1003;
     top: 4%;
     left:5px;
 }
 .social:hover {
-    color: darkblue;
+    color: blue;
     text-decoration: none;
 }
