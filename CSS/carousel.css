@@ -41,12 +41,13 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-    margin-bottom: -1px;
+    margin-bottom: 5px;
     text-align: center;
     border: solid;
     border-radius: 50px;
     border-color: #c84c09;
     background-color: #e2d171;
+    padding-top: 15px;
 }
 .marketing h2 {
     font-weight: normal;
@@ -99,13 +100,14 @@ body {
 .social {
     position: static;
     cursor: pointer;
-    font-size:30px;
+    font-size:40px;
     color: #e2d171;
     z-index:1003;
     top: 4%;
     left:5px;
+    padding-left: 10px;
 }
 .social:hover {
-    color: blue;
+    color: #585f25;
     text-decoration: none;
 }

@@ -322,10 +322,10 @@
                 if ($(this).data('scene') === sections.last().data('scene')) {
                     scrollDown
                         .removeClass("glyphicon-triangle-bottom")
-                        .addClass("glyphicon-tree-conifer");
+                        .addClass("glyphicon-triangle-top");
                 } else {
                     scrollDown
-                        .removeClass("glyphicon-tree-conifer")
+                        .removeClass("glyphicon-triangle-top")
                         .addClass("glyphicon-triangle-bottom");
                 }
 
@@ -404,7 +404,7 @@
                     }
                     // if key is equal to 0, meaning it is the first scene.
                     if (key === 0) {
-                        $(".storymap-navwidget").append('<li><a class="glyphicon glyphicon-tree-conifer" data-toggle="tooltip" title="' + sceneName + '" href="' + scrollScript + '" ></a></li>');
+                        $(".storymap-navwidget").append('<li><a class="glyphicon glyphicon-triangle-top" data-toggle="tooltip" title="' + sceneName + '" href="' + scrollScript + '" ></a></li>');
                     } else {
                         $(".storymap-navwidget").append('<li><a class="glyphicon glyphicon-one-fine-full-dot" data-toggle="tooltip" title="' + sceneName + '" href="' + scrollScript + '" ></a></li>');
                     }
