@@ -92,7 +92,7 @@ footer{
     background-color: #c84c09;
     border-radius: 50px;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
     width: 1170px;
 }
 
@@ -994,7 +994,7 @@ pre code {
         border-color: #c84c09;
         border-radius: 50px;
         background-color: #e2d171;
-        padding: 25px;
+        padding: 24px;
     }
 
     .col-md-8 {
