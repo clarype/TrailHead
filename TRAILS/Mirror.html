@@ -93,7 +93,7 @@
 
                 <p \>
                     The hike into the Eagle Cap Wilderness was a learning experience to say the least. The hike to
-                    Mirror Lake is about 8 miles of one magnificent landscape. The U-shaped valleys that were formed
+                    Mirror Lake is about 12 kilometers of one most magnificent landscape. The U-shaped valleys that were formed
                     from glaciers remind me of walking through Glacier National Park or Yosemite.
                 </p>
 
@@ -107,8 +107,8 @@
 
                 <p \>
                     As with most trailheads there is a parking fee and a self issue wilderness pass at the Two Pan
-                    trailhead. The beginning of the Lostine trail as a moderate ascent to this point then levels out
-                    till the next marker. The river crossing as seen in the image has a will built bridge; however,
+                    trailhead. The beginning of the Lostine trail has a moderate ascent to this point then levels out
+                    till the next marker. The river crossing as seen in the image has a well built bridge; however,
                     Finn was a little unsure about crossing.
 
 
@@ -147,7 +147,7 @@
                 </h2>
 
                 <p \>
-                    This point is the beginning of the sweet waking section. It pretty flat for about 2 miles beyond
+                    This point is the beginning of the sweet waking section. It pretty flat for about 2 kilometers beyond
                     this
                     marker. To our surprize this was our first glimpse of Eagle Cap. Finn was happy in the change of
                     scenery as well.
@@ -188,7 +188,7 @@
 
                 <p \>
                     With the Mirror Lake in site it was time to find a place to set up camp which should be easy,
-                    but everyone and their friends decide to up to Mirror Lake. So we decided to truck on a little
+                    but everyone and their friends decide to come up to Mirror Lake. So we decided to truck on a little
                     further, but it was worth it.
                 </p>
 
@@ -256,7 +256,9 @@
     var layers = {
 
         layer1: {
-            layer: L.geoJson.ajax('../GEOJSON/EagleCap.geojson')
+            layer: L.geoJson.ajax('../GEOJSON/EagleCap.geojson', {
+                color: '#c84c09'
+            })
 
         },
         layer2: {
