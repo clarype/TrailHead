@@ -8617,4 +8617,8 @@ a.text-dark:focus, a.text-dark:hover {
     visibility: hidden !important
 }
 
+.link {
+    color: #585f25;
+}
+
 /*# sourceMappingURL=bootstrap.min.css.map */
