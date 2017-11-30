@@ -41,7 +41,7 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-    margin-bottom: 5px;
+    margin: 10px;
     text-align: center;
     border: solid;
     border-radius: 50px;
