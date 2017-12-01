@@ -74,8 +74,8 @@
                     section.trigger('notviewing');
                 }
 
-                if (section.height() <= $(window).height() * 0.20) {
-                    section.height($(window).height() * 0.20)
+                if (section.height() <= $(window).height() * 0.15) {
+                    section.height($(window).height() * 0.15)
                 }
 
 
