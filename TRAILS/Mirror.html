@@ -326,8 +326,8 @@
         createMap: function () {
             var map = new L.map($(".storymap-map")[0], {zoomControl: false});
             basemap = this.baselayer.layer.addTo(map);
-            var url='https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-                attr="Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)";
+            var url='https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg',
+                attr="http://www.openstreetmap.org/copyright";
 
             service = new L.TileLayer(url, {minZoom: 0, maxZoom: 6, attribution: attr});
 
