@@ -8,7 +8,7 @@
 
         var defaults = {
             selector: '[data-scene]',
-            triggerpos: '20%',
+            triggerpos: '33.333%',
             navbar: false,
             navwidget: false,
             legend: false,
@@ -363,7 +363,7 @@
                 var viewing = $(".viewing");
                 if (viewing.data("scene") !== $("section:last").data("scene")) {
 
-                    if (nav.length == 0) {
+                    if (nav.length = 0) {
                         window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - $('.storymap-navbar').height() - 1);
                     } else {
                         window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 1);
