@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
     font-family: Cairo, sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     color: #352208
 }
 
@@ -152,8 +152,8 @@ section {
 }
 
 .storymap-loader {
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow:  0 1px 1px rgba(197, 197, 197, 0.95);
+    color: rgba(226, 209, 113, 0.9);
+    text-shadow:  0 1px 1px rgba(200, 76, 9, 0.95);
     position: fixed;
     top: 45%;
     left: 50%;
