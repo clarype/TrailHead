@@ -8,7 +8,7 @@
 
         var defaults = {
             selector: '[data-scene]',
-            triggerpos: '15%',
+            triggerpos: '20%',
             navbar: false,
             navwidget: false,
             legend: false,
@@ -19,7 +19,7 @@
             progressline: false,
             createMap: function () {
                 var map = L.map($('.storymap-map')[0], {zoomControl: false}).setView([44, -120], 7);
-                L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg', {detectRetina:ture}).addTo(map);
+                L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {detectRetina:ture}).addTo(map);
                 return map;
             }
         };
@@ -74,8 +74,8 @@
                     section.trigger('notviewing');
                 }
 
-                if (section.height() <= $(window).height() * 0.15) {
-                    section.height($(window).height() * 0.15)
+                if (section.height() <= $(window).height() * 0.20) {
+                    section.height($(window).height() * 0.20)
                 }
 
 
@@ -364,9 +364,9 @@
                 if (viewing.data("scene") !== $("section:last").data("scene")) {
 
                     if (nav.length == 0) {
-                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - $('.storymap-navbar').height() - 25);
+                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - $('.storymap-navbar').height() - 1);
                     } else {
-                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 25);
+                        window.scrollBy(0, viewing.offset().top + viewing.height() - $(window).scrollTop() - 1);
                     }
                 } else {
                     window.scrollTo(0, 0);

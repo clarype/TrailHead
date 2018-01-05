@@ -85,10 +85,10 @@
 
             <section data-scene="scene1">
 
-                <h1 class="page-header" \> Hike to Eagle Cap</h1>
+                <h1 class="page-header" > Hike to Eagle Cap</h1>
 
                 <a href="../images/EagleCap/File_000.jpeg" target="_blank">
-                    <img class= "img-bor" src="../images/EagleCap/File_000.jpeg" \/>
+                    <img class= "img-bor" src="../images/EagleCap/File_000.jpeg">
                 </a>
 
                 <p>
@@ -103,11 +103,11 @@
 
             <section data-scene="scene2">
 
-                <h2 \>
+                <h2>
                     River Crossing
                 </h2>
 
-                <p \>
+                <p>
                     As with most trailheads there is a parking fee and a self issue wilderness pass at the Two Pan
                     trailhead. The beginning of the Lostine trail has a moderate ascent to this point then levels out
                     till the next marker. The river crossing as seen in the image has a well built bridge; however,
@@ -117,7 +117,7 @@
                 </p>
 
                 <a href="../images/EagleCap/IMG_6695.JPG" target="_blank">
-                    <img class= "img-bor" src="../images/EagleCap/IMG_6695.JPG" />
+                    <img class= "img-bor" src="../images/EagleCap/IMG_6695.JPG">
                 </a>
 
 
@@ -125,18 +125,18 @@
 
             <section data-scene="scene3">
 
-                <h2 \>
+                <h2>
                     Switchbacks
                 </h2>
 
-                <p \>
+                <p>
                     Slightly before this marker and a little ways after as seen on the map is the largest switchback
                     section of the whole trail. We found several signs of horses, so as always keep yourself aware of
                     your surroundings especially in this steep rocky switchback sections.
                 </p>
 
                 <a href="../images/EagleCap/IMG_6706.JPG" target="_blank">
-                    <img class= "img-bor" src="../images/EagleCap/IMG_6706.JPG" />
+                    <img class= "img-bor" src="../images/EagleCap/IMG_6706.JPG">
                 </a>
                 <br>
 
@@ -144,11 +144,11 @@
 
             <section data-scene="scene4">
 
-                <h2 \>
+                <h2>
                     Halfway There
                 </h2>
 
-                <p \>
+                <p>
                     This point is the beginning of the sweet waking section. It pretty flat for about 2 kilometers beyond
                     this
                     marker. To our surprize this was our first glimpse of Eagle Cap. Finn was happy in the change of
@@ -156,7 +156,7 @@
                 </p>
 
                 <a href="../images/EagleCap/IMG_6717.JPG" target="_blank">
-                    <img class= "img-bor" src="../images/EagleCap/IMG_6717.JPG" />
+                    <img class= "img-bor" src="../images/EagleCap/IMG_6717.JPG">
                 </a>
                 <br>
 
@@ -164,11 +164,11 @@
 
             <section data-scene="scene5">
 
-                <h2 \>
+                <h2>
                     Place along the way
                 </h2>
 
-                <p \>
+                <p>
                     Even though it was flat, Eagle Cap looked so far away. Finn was ready set up camp. If you look
                     at the image the tree covered rise just below Eagle Cap (the peak) is the last ascent to Mirror
                     lake. I was hoping to see some wildlife, but there was a lot people on the tail, do to the
@@ -176,7 +176,7 @@
                 </p>
 
                 <a href="../images/EagleCap/IMG_6728.JPG" target="_blank">
-                    <img class= "img-bor" src="../images/EagleCap/IMG_6728.JPG" />
+                    <img class= "img-bor" src="../images/EagleCap/IMG_6728.JPG">
                 </a>
                 <br>
 
@@ -188,18 +188,18 @@
                     Almost There
                 </h2>
 
-                <p >
+                <p>
                     With the Mirror Lake in site it was time to find a place to set up camp which should be easy,
                     but everyone and their friends decide to come up to Mirror Lake. So we decided to truck on a little
                     further, but it was worth it.
                 </p>
 
                 <a href="../images/EagleCap/IMG_6803.JPG" target="_blank">
-                    <img class= "img-bor" src="../images/EagleCap/IMG_6803.JPG"/>
+                    <img class= "img-bor" src="../images/EagleCap/IMG_6803.JPG">
                 </a>
                 <br>
 
-                <p \>
+                <p>
                     Finn started to trail behind he was so tired but did great considering it was a 8 mile hike.
                 </p>
 
@@ -207,18 +207,18 @@
 
             <section data-scene="scene7">
 
-                <h2 \>
+                <h2>
                     Worth It!
                 </h2>
 
-                <p \>
+                <p>
                     After poking around the lake Katie found a sweet spot with an great
                     view. We set up our hammocks and enjoyed the view. Oh yeah I had a
                     heart attack the next day, but walked out thing it was altitude sickness.
                 </p>
 
                 <a href="../images/EagleCap/File_000.jpeg" target="_blank">
-                    <img class= "img-bor" src="../images/EagleCap/File_000.jpeg" />
+                    <img class= "img-bor" src="../images/EagleCap/File_000.jpeg">
                 </a>
                 <br>
 
@@ -264,8 +264,7 @@
 
         },
         layer2: {
-            layer: L.tileLayer('https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/' +
-                '{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg')
+            layer: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png')
         },
         layer3: {
             layer: L.marker([45.241031, -117.366729], {icon: hiker})
@@ -316,7 +315,7 @@
         layers: layers,
         baselayer: layers.layer2,
         legend: false,
-        loader: false,
+        loader: true,
         flyto: true,
         credits:  "Click here to see data sources<i class='glyphicon glyphicon-tree-conifer animated zoomIn infinite' style='color: green'></i> by Peter Clary",
         scalebar: true,
@@ -326,8 +325,8 @@
         createMap: function () {
             var map = new L.map($(".storymap-map")[0], {zoomControl: false});
             basemap = this.baselayer.layer.addTo(map);
-            var url='https://api.mapbox.com/styles/v1/clarype/cj9lryf951wc02rrxo51j4ut8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xhcnlwZSIsImEiOiJjaXpoODk3NzUwMTU3MzNtZWJlNWUzcXQ4In0.jjpzASpHGUkCJTsG6kZLIg',
-                attr="http://www.openstreetmap.org/copyright";
+            var url='https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+                attr="Map data: &copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>, <a href=\"http://viewfinderpanoramas.org\">SRTM</a> | Map style: &copy; <a href=\"https://opentopomap.org\">OpenTopoMap</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA</a>)";
 
             service = new L.TileLayer(url, {minZoom: 0, maxZoom: 6, attribution: attr});
 
