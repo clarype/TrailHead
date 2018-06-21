@@ -18,7 +18,7 @@
             scrolldown: false,
             progressline: false,
             createMap: function () {
-                var map = L.map($('.storymap-map')[0], {zoomControl: false}).setView([44, -120], 7);
+                var map = L.map($('.storymap-map')[0], {zoomControl: false}).setView([44, -120], 5);
                 L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {detectRetina:ture}).addTo(map);
                 return map;
             }
