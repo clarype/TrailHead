@@ -341,7 +341,7 @@
             map.addLayer(service).fitBounds(bounds);
             map.setView(new L.LatLng(45.2150, -117.3863),13);
 
-            var osm2 = new L.TileLayer(url, {minZoom: 0, maxZoom: 6, attribution: attr });
+            var osm2 = new L.TileLayer(url, {minZoom: 0, maxZoom: 12, attribution: attr });
             var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
 
